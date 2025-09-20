@@ -15,13 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include,re_path
+from django.urls import path, include, re_path
 from rest_framework import routers
-from main.views import ServiceViewSet, ContactViewSet, EnquiryCreateAPIView
-from django.views.generic import TemplateView
+from main.views import ServiceViewSet, ContactViewSet, EnquiryCreateAPIView, index
+
+# DRF routers for your API endpoints
 router = routers.DefaultRouter()
 router.register(r'services', ServiceViewSet)
 router.register(r'contacts', ContactViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
@@ -29,6 +31,7 @@ urlpatterns = [
 ]
 
 # React frontend fallback (catch-all)
+# Any URL not starting with /api/ or /admin/ will serve React index.html
 urlpatterns += [
-    re_path(r'^.*$', TemplateView.as_view(template_name="index.html")),
+    re_path(r'^.*$', index),
 ]

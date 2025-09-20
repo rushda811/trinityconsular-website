@@ -10,6 +10,10 @@ from django.conf import settings
 from .models import Service, Contact
 from .serializers import  EnquirySerializer,ServiceSerializer, ContactSerializer
 
+
+def index(request):
+    return render(request, 'index.html')
+
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer

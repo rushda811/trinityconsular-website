@@ -62,7 +62,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'frontend_build'],  # <-- add this
+        'DIRS': [BASE_DIR / 'build'],  # <-- add this
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,11 +152,8 @@ CORS_ALLOWED_ORIGINS = [
 
 
 import os
-
-STATICFILES_DIRS = [
-    BASE_DIR / "frontend_build" / "static",
-]
+STATICFILES_DIRS = [BASE_DIR / "frontend" / "build" / "static"]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-TEMPLATES[0]["DIRS"] = [BASE_DIR / "frontend_build"]
+TEMPLATES[0]["DIRS"] = [BASE_DIR / "frontend" / "build"]
