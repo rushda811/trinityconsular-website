@@ -110,7 +110,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # CORS configuration
 CORS_ALLOWED_ORIGINS = [
-    "https://trinity-consular.onrender.com"
+    "https://trinityconsular-website.onrender.com"
 ]
 
 # Default primary key field type
