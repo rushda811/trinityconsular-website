@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-58h69zc-t#^i*slwuioh5x0b@zqb+%ke(+d^@cystcp5dyo+!('
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "trinityconsular-website.onrender.com"]
 
 # Application definition
