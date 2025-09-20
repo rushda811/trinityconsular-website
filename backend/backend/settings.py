@@ -85,7 +85,7 @@ USE_I18N = True
 USE_TZ = True
 
 # React frontend build directory
-FRONTEND_BUILD_DIR = BASE_DIR / "frontend" / "build"
+FRONTEND_BUILD_DIR = BASE_DIR / "frontend_build"
 
 # Templates
 TEMPLATES = [
