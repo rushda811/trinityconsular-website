@@ -2,17 +2,16 @@ import React from "react";
 import bahrain from "../assets/bahrain.webp";
 import china from "../assets/china.webp";
 import egypt from "../assets/egypt.webp";
-import iraq from "../assets/iraq.jpg";
 import jordan from "../assets/jordan.jpg";
 import kuwait from "../assets/kuwait.png";
 import malaysia from "../assets/malaysia.webp";
 import pakistan from "../assets/pakistan.webp";
 import qatar from "../assets/qatar.webp";
-import srilanka from "../assets/srilanka.webp";
 import taiwan from "../assets/taiwan.webp";
 import thailand from "../assets/thailand.webp";
 import uae from "../assets/uae.webp";
 import vietnam from "../assets/vietnam.jpg";
+import india from "../assets/india.png";
 
 // Reordered countries: GCC → Middle East → Asia
 const countries = [
@@ -20,16 +19,15 @@ const countries = [
   { name: "Kuwait", flag: kuwait },
   { name: "Qatar", flag: qatar },
   { name: "UAE", flag: uae },
-  { name: "Iraq", flag: iraq },
   { name: "Jordan", flag: jordan },
   { name: "Egypt", flag: egypt },
   { name: "China", flag: china },
   { name: "Malaysia", flag: malaysia },
   { name: "Pakistan", flag: pakistan },
-  { name: "Sri Lanka", flag: srilanka },
   { name: "Taiwan", flag: taiwan },
   { name: "Thailand", flag: thailand },
   { name: "Vietnam", flag: vietnam },
+  { name: "India", flag: india },
 ];
 
 export default function CountryTicker() {

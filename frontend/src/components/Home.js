@@ -147,7 +147,7 @@ function Home() {
 
 
 useEffect(() => {
-  fetch(`${process.env.REACT_APP_API_URL}/services/`)
+  fetch("https://trinityconsular-website.onrender.com/api/services/")
     .then((res) => res.json())
     .then((data) => setServices(data))
     .catch((err) => console.error("Error loading services:", err));
@@ -182,18 +182,7 @@ useEffect(() => {
       if (!wrapper) return;
 
       const screenWidth = window.innerWidth;
-      // const desktopWidth = 1200;
-
-      // if (screenWidth < desktopWidth) {
-      //   wrapper.style.transform = "scale(1";
-      //   wrapper.style.width ="100%";
-      //   wrapper.style.transformOrigin = "top left";
-      // } else {
-      //   const scale = screenWidth / desktopWidth;
-      //   wrapper.style.transform = `scale(${scale})`;
-      //   wrapper.style.width =`${desktopWidth}px`;
-      //   wrapper.style.transformOrigin = "top left";
-      // }
+   
 wrapper.style.transform = "none";
 wrapper.style.width = "100%";
 wrapper.style.margin = "0 auto";
@@ -520,7 +509,7 @@ wrapper.style.transformOrigin = "top center";
     </Link>
   </Card.Body>
 </Card>
-n
+
                   </FadeSection>
                 </Col>
               );

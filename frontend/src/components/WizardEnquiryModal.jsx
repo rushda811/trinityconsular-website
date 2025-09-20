@@ -167,7 +167,7 @@ function WizardEnquiryModal({ show = false, handleClose }) {
     e.preventDefault();
     try {
       const payload = { service, ...formData, quantity: parseInt(formData.quantity, 10) };
-      await axios.post("http://localhost:8000/api/enquiry/", payload);
+await axios.post("https://trinityconsular-website.onrender.com/api/enquiry/", payload);
       setSubmitted(true);
       setTimeout(handleCloseModal, 5000);
     } catch (err) {

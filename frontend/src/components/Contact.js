@@ -38,8 +38,8 @@ function Contact() {
     e.preventDefault();
     const payload = { ...formData };
     try {
-const res = await fetch("/api/contacts/", 
- {
+const res = await fetch("https://trinity-backend.onrender.com/api/contacts/", {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
