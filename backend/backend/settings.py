@@ -113,8 +113,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # CORS configuration
 CORS_ALLOWED_ORIGINS = [
-    "https://trinityconsular-website.onrender.com"
+    "https://trinityconsular-website.onrender.com",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
 ]
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
