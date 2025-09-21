@@ -1,1 +1,32 @@
-[{"model": "main.service", "pk": 1, "fields": {"title": "UK Apostille", "description": "We authenticate your documents with a government-issued Apostille for use abroad, ensuring they are legally valid, quickly and affordably.", "icon": "FaCertificate", "slug": "uk-apostille"}}, {"model": "main.service", "pk": 2, "fields": {"title": "Embassy Legalisation", "description": "We handle the full embassy legalisation process for your documents, ensuring they are officially recognised abroad, processed securely, and delivered efficiently.", "icon": "FaLandmark", "slug": "embassy-legalisation"}}, {"model": "main.service", "pk": 4, "fields": {"title": "Shuttle Service", "description": "We securely carry and submit personal, business, and client documents to the FCDO on your behalf, ensuring fast, accurate, and hassle-free processing.", "icon": "FaBus", "slug": "shuttle-service"}}]
+[
+{
+  "model": "main.service",
+  "pk": 1,
+  "fields": {
+    "title": "UK Apostille",
+    "description": "We authenticate your documents with a government-issued Apostille for use abroad, ensuring they are legally valid, quickly and affordably.",
+    "icon": "FaCertificate",
+    "slug": "uk-apostille"
+  }
+},
+{
+  "model": "main.service",
+  "pk": 2,
+  "fields": {
+    "title": "Embassy Legalisation",
+    "description": "We handle the full embassy legalisation process for your documents, ensuring they are officially recognised abroad, processed securely, and delivered efficiently.",
+    "icon": "FaLandmark",
+    "slug": "embassy-legalisation"
+  }
+},
+{
+  "model": "main.service",
+  "pk": 4,
+  "fields": {
+    "title": "Shuttle Service",
+    "description": "We securely carry and submit personal, business, and client documents to the FCDO on your behalf, ensuring fast, accurate, and hassle-free processing.",
+    "icon": "FaBus",
+    "slug": "shuttle-service"
+  }
+}
+]
