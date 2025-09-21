@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import homeimage from "../assets/homeimage.jpeg";
-import dhl from "../assets/dhl.jpg";
+import dhl from "../assets/dhl.webp";
 import degree from "../assets/degree.jpg";
 import birth from "../assets/birth.jpg";
 import london from "../assets/london.webp";

@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.2eac2a69.css",
-    "main.js": "/static/js/main.c9a3aff3.js",
+    "main.js": "/static/js/main.a3bb5b12.js",
     "static/js/453.54292a4b.chunk.js": "/static/js/453.54292a4b.chunk.js",
     "static/media/check.jpg": "/static/media/check.eb3fce750086c1c0e0b8.jpg",
-    "static/media/dhl.jpg": "/static/media/dhl.7329fb616a3f422e6ab7.jpg",
     "static/media/uae.jpg": "/static/media/uae.9a008708c3f2fd097c63.jpg",
     "static/media/waxseal.jpg": "/static/media/waxseal.1b6b2390dd66dbf6d508.jpg",
     "static/media/TAIWANp.jpg": "/static/media/TAIWANp.eb3defa8c2c91eace773.jpg",
@@ -34,6 +33,7 @@
     "static/media/worldmap.jpg": "/static/media/worldmap.be4eab597c008474a9fc.jpg",
     "static/media/birth.jpg": "/static/media/birth.72cc74ca9d824b6a549a.jpg",
     "static/media/cert2.jpg": "/static/media/cert2.72cc74ca9d824b6a549a.jpg",
+    "static/media/dhl.webp": "/static/media/dhl.eba79a54fb05fa661f99.webp",
     "static/media/hands.jpeg": "/static/media/hands.7fec256e9c68183ac9ee.jpeg",
     "static/media/personal-docs.jpg": "/static/media/personal-docs.2068e3f7f6ec3187182c.jpg",
     "static/media/pg.jpg": "/static/media/pg.35fcf0ab83feb45027b4.jpg",
@@ -57,11 +57,11 @@
     "static/media/uae.webp": "/static/media/uae.50c5ddd9fc84f750240b.webp",
     "static/media/thailand.webp": "/static/media/thailand.46952a3a0cb4e01dd054.webp",
     "main.2eac2a69.css.map": "/static/css/main.2eac2a69.css.map",
-    "main.c9a3aff3.js.map": "/static/js/main.c9a3aff3.js.map",
+    "main.a3bb5b12.js.map": "/static/js/main.a3bb5b12.js.map",
     "453.54292a4b.chunk.js.map": "/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eac2a69.css",
-    "static/js/main.c9a3aff3.js"
+    "static/js/main.a3bb5b12.js"
   ]
 }
