@@ -95,7 +95,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             style={{ flex: "1 1 35%", textAlign: "center", minWidth: "180px", marginTop: "20px" }}
           >
-            <Image src={logo} alt="Trinity Consular Logo" style={{ maxWidth: "100%", height: "auto" }} fluid />
+            <Image src={logo} alt="Trinity Consular Logo" style={{ maxWidth: "100%", height: "auto" }} loading="lazy" fluid />
           </motion.div>
         </motion.div>
       </Container>
@@ -161,23 +161,34 @@ const About = () => {
       </motion.div> */}
 
       {/* Services Section */}
-      <motion.div
-        style={{
-          position: "relative",
-          backgroundImage: `url(${stamps})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          padding: "1rem",
-          borderRadius: "12px",
-          color: "#000",
-          overflow: "hidden",
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="mb-5 text-center"
-      >
+<motion.div
+  style={{
+    position: "relative",
+    overflow: "hidden",
+    borderRadius: "12px",
+    color: "#000",
+    padding: "1rem",
+    textAlign: "center",
+  }}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+  {/* Lazy-loaded background image */}
+  <img
+    src={stamps}
+    alt="Stamps Background"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: 0,
+    }}
+    loading="lazy"
+  />
         <div
           style={{
             position: "absolute",
@@ -276,6 +287,7 @@ textShadow: "0px 2px 6px rgba(0,0,0,0.7)"
       height: "auto",
       objectFit: "cover",
     }}
+    loading="lazy"
   />
 </Col>
           <Col md={6}>

@@ -3,7 +3,7 @@ import homeimage from "../assets/homeimage.jpeg";
 import dhl from "../assets/dhl.jpg";
 import degree from "../assets/degree.jpg";
 import birth from "../assets/birth.jpg";
-import london from "../assets/london.jpg";
+import london from "../assets/london.webp";
 import pg from "../assets/pg.jpg";
 import poa from "../assets/poa.jpg";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ import {
   FaBus,
 } from "react-icons/fa";
 
-import bgApostile from "../assets/bgappostile.png";
+import bgApostile from "../assets/bgappostile.webp";
 
 const iconMap = {
   FaCertificate: FaCertificate,
@@ -654,6 +654,7 @@ wrapper.style.transformOrigin = "top center";
   <img
     src={item.img}
     alt={item.caption}
+    loading="lazy"
     style={{
       width: "100%",
       height: "370px",
@@ -770,6 +771,7 @@ wrapper.style.transformOrigin = "top center";
           <motion.img
             src={dhl}
             alt="Worldwide Document Couriering"
+            loading="lazy"
        style={{
     width: "100%",      // stretch full width of container
     height: "auto",     // maintain aspect ratio

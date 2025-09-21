@@ -12,29 +12,19 @@ import taiwan from "../assets/taiwan.webp";
 import thailand from "../assets/thailand.webp";
 import uae from "../assets/uae.webp";
 import vietnam from "../assets/vietnam.jpg";
-import UAEP from "../assets/UAEP.jpg";
-import bahrainp from "../assets/bahrainp.jpg";
-import chinap from "../assets/CHINAp.jpg";
+import UAEP from "../assets/UAEP.38b9f92109e06633aea9.webp";
+import bahrainp from "../assets/bahrainp.ddd6356a054507c7ca81.webp";
+import chinap from "../assets/CHINAp.6cd8c8efec5419ea7db3.webp";
 import egyptp from "../assets/egyptp.jpg";
-import jordanp from "../assets/JORDANp.jpg";
-import kuwaitp from "../assets/KUWAITp.jpg";
-import malaysiap from "../assets/MALASIYAp.jpg";
-import pakistanp from "../assets/PAKISTANp.jpg";
-import qatarp from "../assets/QATARp.jpg";
-import indiap from "../assets/indiap.png";
-import thailandp from "../assets/THAILANDp.jpg";
-import vietnamp from "../assets/VIETNAMp.jpg";
-import taiwanp from "../assets/TAIWANp.jpg";
-
-
-
-
-
-
-
-
-
-
+import jordanp from "../assets/JORDANp.dba87f8d5e9d2dc70d18.webp";
+import kuwaitp from "../assets/KUWAITp.80c23394c138e2429730.webp";
+import malaysiap from "../assets/MALASIYAp.5a51680b55e998c8509c.webp";
+import pakistanp from "../assets/PAKISTANp.d2149ffd2068caacfdc9.webp";
+import qatarp from "../assets/QATARp.46b74629e0c001bf97a7.webp";
+import indiap from "../assets/indiap.9540e49567450d9a6692.webp";
+import thailandp from "../assets/THAILANDp.84e4aa1b06612c724cf6.webp";
+import vietnamp from "../assets/VIETNAMp.f6917358095d6af89d44.webp";
+import taiwanp from "../assets/THAILANDp.84e4aa1b06612c724cf6.webp";
 
 const countries = [
   {

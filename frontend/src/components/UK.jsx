@@ -1,7 +1,7 @@
 // src/components/UKFinal.jsx
 import React, { useState } from "react";
 import cert1 from "../assets/cert1.jpg"
-import ukser from "../assets/UKSER.jpg"
+import ukser from "../assets/UKSER.webp"
 import cert2 from "../assets/cert2.jpg"
 import WizardEnquiryModal from "./WizardEnquiryModal";
 import cert3 from "../assets/cert3.jpg"

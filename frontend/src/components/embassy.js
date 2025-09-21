@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Row, Col, Container,Button } from "react-bootstrap";
 import { motion} from "framer-motion";
-import embassy from "../assets/embassy.jpeg";
+import embassy from "../assets/embassy.webp";
 import CountryModal from "./CountryModal";
 import WizardEnquiryModal from "./WizardEnquiryModal";
 
