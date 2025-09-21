@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-58h69zc-t#^i*slwuioh5x0b@zqb+%ke(+d^@cystcp5dyo+!('
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "trinityconsular-website.onrender.com"]
 
 # Application definition
@@ -67,17 +67,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Email configuration
+import os
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'info@trinityconsular.com'
-EMAIL_HOST_PASSWORD = 'pmgr cmya hjqb idwe'  # Use app password if using Gmail
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')  # get from Render env
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # get from Render env
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = 'info@trinityconsular.com'
 SITE_NAME = 'Trinity Consular'
 CONTACT_NUMBER = '+0044 7440076614'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
