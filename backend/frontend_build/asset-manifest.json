@@ -1,11 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.2eac2a69.css",
-    "main.js": "/static/js/main.f8b49edd.js",
+    "main.js": "/static/js/main.c9a3aff3.js",
     "static/js/453.54292a4b.chunk.js": "/static/js/453.54292a4b.chunk.js",
-    "static/media/clip.jpg": "/static/media/clip.a16a3b67fd3bb3c822a3.jpg",
     "static/media/check.jpg": "/static/media/check.eb3fce750086c1c0e0b8.jpg",
-    "static/media/SRILANKAp.jpg": "/static/media/SRILANKAp.a82727d8362e4c329338.jpg",
     "static/media/dhl.jpg": "/static/media/dhl.7329fb616a3f422e6ab7.jpg",
     "static/media/uae.jpg": "/static/media/uae.9a008708c3f2fd097c63.jpg",
     "static/media/waxseal.jpg": "/static/media/waxseal.1b6b2390dd66dbf6d508.jpg",
@@ -24,16 +22,13 @@
     "static/media/PAKISTANp.webp": "/static/media/PAKISTANp.e5c4c186c155752ff609.webp",
     "static/media/CHINAp.webp": "/static/media/CHINAp.386a84c7d66e421d8998.webp",
     "static/media/VIETNAMp.webp": "/static/media/VIETNAMp.218b46a723c0af0761ec.webp",
-    "static/media/trust.jpeg": "/static/media/trust.396030bf086ed32ce451.jpeg",
     "static/media/indiap.webp": "/static/media/indiap.a8187c4b7db8190e2d6c.webp",
     "static/media/JORDANp.webp": "/static/media/JORDANp.97188758226eb22b2903.webp",
     "static/media/MALASIYAp.webp": "/static/media/MALASIYAp.cd7edc00e41458fa61ac.webp",
     "static/media/QATARp.webp": "/static/media/QATARp.7c73d4fbe92338f4f50e.webp",
     "static/media/homeimage.jpeg": "/static/media/homeimage.cd322bd97531d754da75.jpeg",
-    "static/media/iraqp.jpg": "/static/media/iraqp.41eb65be2b62dfdf6c0a.jpg",
     "static/media/egyptp.jpg": "/static/media/egyptp.9c3bdd00614b2500a711.jpg",
     "static/media/bgappostile.webp": "/static/media/bgappostile.78601c4633e4f55105d4.webp",
-    "static/media/iraq.jpg": "/static/media/iraq.64f84b5e79a2f87c2b1d.jpg",
     "static/media/galaxy.jpg": "/static/media/galaxy.f1ab61abe5a92899ce29.jpg",
     "static/media/stampss.jpeg": "/static/media/stampss.660d4bbe15b48e8c1464.jpeg",
     "static/media/worldmap.jpg": "/static/media/worldmap.be4eab597c008474a9fc.jpg",
@@ -51,7 +46,6 @@
     "static/media/china.webp": "/static/media/china.08c9e7b49cad5f63347a.webp",
     "static/media/jordan.jpg": "/static/media/jordan.7934c3292654ccd0d3e0.jpg",
     "static/media/vietnam.jpg": "/static/media/vietnam.fb096667053399052e3d.jpg",
-    "static/media/srilanka.webp": "/static/media/srilanka.98d7080fb2aa7a1bbc4f.webp",
     "static/media/kuwait.png": "/static/media/kuwait.8675e8cf898e1a4fb0da.png",
     "static/media/pakistan.webp": "/static/media/pakistan.8ea8cedc18d5f09a8994.webp",
     "static/media/gify.gif": "/static/media/gify.027685238cc2c698dc69.gif",
@@ -63,11 +57,11 @@
     "static/media/uae.webp": "/static/media/uae.50c5ddd9fc84f750240b.webp",
     "static/media/thailand.webp": "/static/media/thailand.46952a3a0cb4e01dd054.webp",
     "main.2eac2a69.css.map": "/static/css/main.2eac2a69.css.map",
-    "main.f8b49edd.js.map": "/static/js/main.f8b49edd.js.map",
+    "main.c9a3aff3.js.map": "/static/js/main.c9a3aff3.js.map",
     "453.54292a4b.chunk.js.map": "/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eac2a69.css",
-    "static/js/main.f8b49edd.js"
+    "static/js/main.c9a3aff3.js"
   ]
 }
