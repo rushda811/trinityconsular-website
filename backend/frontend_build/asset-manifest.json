@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2eac2a69.css",
-    "main.js": "/static/js/main.45208d9e.js",
+    "main.js": "/static/js/main.116a4024.js",
     "static/js/453.54292a4b.chunk.js": "/static/js/453.54292a4b.chunk.js",
     "static/media/check.jpg": "/static/media/check.eb3fce750086c1c0e0b8.jpg",
     "static/media/uae.jpg": "/static/media/uae.9a008708c3f2fd097c63.jpg",
@@ -49,6 +49,7 @@
     "static/media/kuwait.png": "/static/media/kuwait.8675e8cf898e1a4fb0da.png",
     "static/media/pakistan.webp": "/static/media/pakistan.8ea8cedc18d5f09a8994.webp",
     "static/media/gify.gif": "/static/media/gify.027685238cc2c698dc69.gif",
+    "static/media/whatsapp.png": "/static/media/whatsapp.58ef144f45421158e44d.png",
     "static/media/qatar.webp": "/static/media/qatar.7e72a127a64191858ae4.webp",
     "static/media/bahrain.webp": "/static/media/bahrain.3c90194b379e6339dbe8.webp",
     "static/media/taiwan.webp": "/static/media/taiwan.40cbc1eba3e0ca92c642.webp",
@@ -57,11 +58,11 @@
     "static/media/uae.webp": "/static/media/uae.50c5ddd9fc84f750240b.webp",
     "static/media/thailand.webp": "/static/media/thailand.46952a3a0cb4e01dd054.webp",
     "main.2eac2a69.css.map": "/static/css/main.2eac2a69.css.map",
-    "main.45208d9e.js.map": "/static/js/main.45208d9e.js.map",
+    "main.116a4024.js.map": "/static/js/main.116a4024.js.map",
     "453.54292a4b.chunk.js.map": "/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eac2a69.css",
-    "static/js/main.45208d9e.js"
+    "static/js/main.116a4024.js"
   ]
 }
