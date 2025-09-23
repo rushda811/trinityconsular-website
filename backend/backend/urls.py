@@ -1,23 +1,30 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework import routers
+from django.views.static import serve
+from django.conf import settings
 from main.views import ServiceViewSet, ContactViewSet, EnquiryCreateAPIView, index
 
-# --- DRF router ---
+# DRF router
 router = routers.DefaultRouter()
 router.register(r'services', ServiceViewSet, basename='service')
-router.register(r'contacts', ContactViewSet, basename='contact')  # explicit basename ensures URL exists
+router.register(r'contacts', ContactViewSet, basename='contact')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # --- API Endpoints ---
+    # API endpoints
     path('api/', include(router.urls)),
     path('api/enquiry/', EnquiryCreateAPIView.as_view(), name='enquiry-create'),
+
+    # Serve React root files
+    path('manifest.json', lambda request: serve(request, 'manifest.json', document_root=settings.FRONTEND_BUILD_DIR)),
+    path('favicon.ico', lambda request: serve(request, 'favicon.ico', document_root=settings.FRONTEND_BUILD_DIR)),
+    path('logo192.png', lambda request: serve(request, 'logo192.png', document_root=settings.FRONTEND_BUILD_DIR)),
+
 ]
 
-# --- React frontend fallback (catch-all) ---
-# Any URL not starting with /api/ or /admin/ will serve React index.html
+# ✅ Catch-all for React routes, EXCLUDING /static/
 urlpatterns += [
-    re_path(r'^.*$', index),
+     re_path(r'^.*$', index),
 ]
