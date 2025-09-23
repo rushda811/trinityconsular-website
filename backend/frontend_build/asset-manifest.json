@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.2eac2a69.css",
-    "main.js": "/static/js/main.03b186b4.js",
+    "main.js": "/static/js/main.255e65f4.js",
     "static/js/453.54292a4b.chunk.js": "/static/js/453.54292a4b.chunk.js",
     "static/media/check.jpg": "/static/media/check.eb3fce750086c1c0e0b8.jpg",
     "static/media/uae.jpg": "/static/media/uae.9a008708c3f2fd097c63.jpg",
+    "static/media/cert3.png": "/static/media/cert3.d9100c55f475eee684ae.png",
     "static/media/waxseal.jpg": "/static/media/waxseal.1b6b2390dd66dbf6d508.jpg",
     "static/media/TAIWANp.jpg": "/static/media/TAIWANp.eb3defa8c2c91eace773.jpg",
-    "static/media/cert3.jpg": "/static/media/cert3.82547a235c4823d352ae.jpg",
     "static/media/cert1.jpg": "/static/media/cert1.3228cdd56443a1f54a92.jpg",
     "static/media/shuttle.jpeg": "/static/media/shuttle.645f55bcb7b66bd60c59.jpeg",
     "static/media/embassy.webp": "/static/media/embassy.2a1e2261449cead371a0.webp",
@@ -34,6 +34,7 @@
     "static/media/birth.jpg": "/static/media/birth.72cc74ca9d824b6a549a.jpg",
     "static/media/cert2.jpg": "/static/media/cert2.72cc74ca9d824b6a549a.jpg",
     "static/media/dhl.webp": "/static/media/dhl.eba79a54fb05fa661f99.webp",
+    "static/media/degree.png": "/static/media/degree.1e883f8fa89f6599ff2f.png",
     "static/media/hands.jpeg": "/static/media/hands.7fec256e9c68183ac9ee.jpeg",
     "static/media/personal-docs.jpg": "/static/media/personal-docs.2068e3f7f6ec3187182c.jpg",
     "static/media/pg.jpg": "/static/media/pg.35fcf0ab83feb45027b4.jpg",
@@ -41,7 +42,6 @@
     "static/media/apostille1.jpg": "/static/media/apostille1.aa472149e16ae3269b55.jpg",
     "static/media/cert4.jpg": "/static/media/cert4.65a57ce3f9bc2ee7f8c4.jpg",
     "static/media/poa.jpg": "/static/media/poa.65a57ce3f9bc2ee7f8c4.jpg",
-    "static/media/degree.jpg": "/static/media/degree.39378a13adc218d6d702.jpg",
     "static/media/malaysia.webp": "/static/media/malaysia.aa5c4197ff906c7c7e74.webp",
     "static/media/china.webp": "/static/media/china.08c9e7b49cad5f63347a.webp",
     "static/media/jordan.jpg": "/static/media/jordan.7934c3292654ccd0d3e0.jpg",
@@ -58,11 +58,11 @@
     "static/media/uae.webp": "/static/media/uae.50c5ddd9fc84f750240b.webp",
     "static/media/thailand.webp": "/static/media/thailand.46952a3a0cb4e01dd054.webp",
     "main.2eac2a69.css.map": "/static/css/main.2eac2a69.css.map",
-    "main.03b186b4.js.map": "/static/js/main.03b186b4.js.map",
+    "main.255e65f4.js.map": "/static/js/main.255e65f4.js.map",
     "453.54292a4b.chunk.js.map": "/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eac2a69.css",
-    "static/js/main.03b186b4.js"
+    "static/js/main.255e65f4.js"
   ]
 }
