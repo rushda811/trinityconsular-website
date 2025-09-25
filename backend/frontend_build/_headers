@@ -1,0 +1,21 @@
+# Cache all images (jpeg, png, webp, avif) for 1 year
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache JS and CSS files for 1 year (React build hashes make them safe)
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files (index.html) – cache very short
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
