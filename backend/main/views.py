@@ -6,6 +6,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 import os
 import threading
+from django.views.decorators.cache import never_cache
 from .models import Service, Contact
 from .serializers import EnquirySerializer, ServiceSerializer, ContactSerializer
 
@@ -18,6 +19,7 @@ def send_email_async(subject, message, from_email, recipient_list):
     threading.Thread(target=send).start()
 
 # Serve React index.html
+@never_cache
 def index(request):
     index_file_path = os.path.join(settings.FRONTEND_BUILD_DIR, "index.html")
     if os.path.exists(index_file_path):
@@ -25,7 +27,6 @@ def index(request):
             return HttpResponse(f.read())
     else:
         raise Http404("React build index.html not found")
-
 
 # API ViewSets
 class ServiceViewSet(viewsets.ModelViewSet):
