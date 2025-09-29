@@ -68,7 +68,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = 'info@trinityconsular.com'
 SITE_NAME = 'Trinity Consular'
-CONTACT_NUMBER = '+0044 7440076614'
+CONTACT_NUMBER = '+44 7440076614'
 
 # React frontend build folder
 FRONTEND_BUILD_DIR = os.path.join(BASE_DIR, 'frontend_build')

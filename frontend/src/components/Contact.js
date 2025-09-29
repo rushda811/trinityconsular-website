@@ -38,7 +38,7 @@ function Contact() {
     e.preventDefault();
     const payload = { ...formData };
     try {
-const res = await fetch("https://trinity-backend.onrender.com/api/contacts/", {
+const res = await fetch("https://trinityconsular-website.onrender.com/api/contacts/", {
 
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -135,25 +135,47 @@ const res = await fetch("https://trinity-backend.onrender.com/api/contacts/", {
             100% { left: 100%; }
           }
 
-          /* Mobile Responsiveness */
-          @media (max-width: 768px) {
-            section[style*='padding: 60px 20px'] h2 { font-size: 2rem !important; }
-            section[style*='padding: 60px 20px'] p { font-size: 1rem !important; padding: 0 10px; line-height: 1.6; }
-            section[style*='flex'] { flex-direction: column !important; padding: 30px 15px !important; gap: 30px !important; }
-            section[style*='flex'] > div:nth-child(1) { flex: 1 1 100% !important; max-width: 100% !important; padding: 20px !important; }
-            section[style*='flex'] > div:nth-child(1) h1 { font-size: 2rem !important; }
-            section[style*='flex'] > div:nth-child(1) form { padding: 20px !important; gap: 15px !important; }
-            .gradient-button { padding: 12px 16px !important; font-size: 0.95rem !important; }
-            section[style*='flex'] > div:nth-child(2) { flex: 1 1 100% !important; max-width: 100% !important; padding: 15px !important; min-height: auto !important; }
-            section[style*='flex'] > div:nth-child(2) h2 { font-size: 1.8rem !important; }
-            section[style*='flex'] > div:nth-child(2) p,
-            section[style*='flex'] > div:nth-child(2) div { font-size: 0.95rem !important; line-height: 1.5 !important; }
-            section[style*='flex'] > div:nth-child(2) iframe { height: 250px !important; }
-            div[style*='position: fixed'] { top: 15px !important; right: 10px !important; min-width: 90% !important; font-size: 0.9rem !important; padding: 12px 18px !important; }
-            label { font-size: 0.9rem !important; }
-            input, textarea { font-size: 0.95rem !important; padding: 10px !important; }
-            a[style*='position: absolute'] { top: 10px !important; right: 10px !important; padding: 8px 12px !important; font-size: 0.85rem !important; }
-          }
+         /* Mobile Responsiveness */
+@media (max-width: 768px) {
+  section[style*='padding: 60px 20px'] {
+    text-align: left !important;
+  }
+
+  section[style*='padding: 60px 20px'] h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Paragraph fully flush left */
+  section[style*='padding: 60px 20px'] p {
+    font-size: 1rem !important;
+    padding: 0 !important;          /* remove side padding */
+    margin: 0 !important;           /* remove default margin */
+    line-height: 1.6;
+    text-align: left !important;    /* ensure left alignment */
+  }
+
+  /* Rest of your existing mobile styles remain unchanged */
+  section[style*='flex'] { flex-direction: column !important; padding: 30px 15px !important; gap: 30px !important; }
+  section[style*='flex'] > div:nth-child(1) { flex: 1 1 100% !important; max-width: 100% !important; padding: 20px !important; }
+  section[style*='flex'] > div:nth-child(1) h1 { font-size: 2rem !important; }
+  section[style*='flex'] > div:nth-child(1) form { padding: 20px !important; gap: 15px !important; }
+  .gradient-button { padding: 12px 16px !important; font-size: 0.95rem !important; }
+  section[style*='flex'] > div:nth-child(2) { flex: 1 1 100% !important; max-width: 100% !important; padding: 15px !important; min-height: auto !important; }
+  section[style*='flex'] > div:nth-child(2) h2 { font-size: 1.8rem !important; }
+  section[style*='flex'] > div:nth-child(2) p,
+  section[style*='flex'] > div:nth-child(2) div { font-size: 0.95rem !important; line-height: 1.5 !important; }
+  section[style*='flex'] > div:nth-child(2) iframe { height: 250px !important; }
+  div[style*='position: fixed'] { top: 15px !important; right: 10px !important; min-width: 90% !important; font-size: 0.9rem !important; padding: 12px 18px !important; }
+  label { font-size: 0.9rem !important; }
+  input, textarea { font-size: 0.95rem !important; padding: 10px !important; }
+  a[style*='position: absolute'] {
+  position: relative !important;  /* make it flow naturally */
+  top: 0 !important;              /* remove absolute top */
+  right: 0 !important;            /* remove absolute right */
+  display: inline-block;           /* keep it inline */
+  margin-bottom: 10px;             /* space below button */
+}
+
         `}
       </style>
 
@@ -210,8 +232,8 @@ const res = await fetch("https://trinity-backend.onrender.com/api/contacts/", {
             <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "0.95rem", fontStyle: "italic", opacity: 0.9 }}>(Closed on weekends and public holidays)</p>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "5px" }}>
-            <span>📧 Akbar: <a href="mailto:akbar@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>akbar@trinityconsular.com</a></span>
-            <span>📧 Jefin: <a href="mailto:accounts@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>accounts@trinityconsular.com</a></span>
+            <span>📧 <a href="mailto:akbar@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>akbar@trinityconsular.com</a></span>
+            <span>📧 <a href="mailto:accounts@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>info@trinityconsular.com</a></span>
             <span>📞 Phone: 0044 7440076614</span>
           </div>
           <iframe title="office-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9998520375707!2d-0.15716702369773822!3d51.51321871027866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605ca560b4db7%3A0x499d055460782789!2sRegus%20-%20London%2C%20Oxford%20Street%20(Marble%20Arch)!5e0!3m2!1sen!2sin!4v1757307617215!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0, borderRadius: "8px", marginBottom: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />

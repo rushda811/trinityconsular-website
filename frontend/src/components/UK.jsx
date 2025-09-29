@@ -4,7 +4,7 @@ import cert1 from "../assets/cert1.jpg"
 import ukser from "../assets/UKSER.webp"
 import cert2 from "../assets/cert2.jpg"
 import WizardEnquiryModal from "./WizardEnquiryModal";
-import cert3 from "../assets/cert3.jpg"
+import cert3 from "../assets/cert3.png"
 import cert4 from "../assets/cert4.jpg"
 import { useNavigate } from "react-router-dom";
 import apostille1 from "../assets/apostille1.jpg"; // Ensure you have an appropriate image in assets
@@ -276,7 +276,7 @@ const UKApostilleFinal = () => {
           marginBottom: "15px",
         }}
       >
-        What is a UK Apostille Stamp?
+        What is UK Apostille Stamp?
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
@@ -293,7 +293,7 @@ const UKApostilleFinal = () => {
           margin: "0 auto",
         }}
       >
-        A <strong>UK Apostille Stamp</strong> is an official certificate issued by the UK 
+        <strong>UK Apostille Stamp</strong> is an official certificate issued by the UK 
         Foreign, Commonwealth &amp; Development Office (FCDO). It confirms that the{" "}
         <strong>signature, seal, or stamp</strong> on a document is genuine and that it was 
         signed by a recognised UK authority such as a public official, solicitor, or notary. 

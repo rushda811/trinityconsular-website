@@ -140,7 +140,6 @@ const FAQ_ITEMS = [
 const cardData = [
   {
     title: "PUBLIC",
-    rate: "£82",
     days: "5-7 Working Days",
     points: ["ACRO Police Clearance",
 "Adoption Certificates",
@@ -157,7 +156,6 @@ const cardData = [
   },
   {
     title: "PERSONAL",
-    rate: "£82",
     days: "5-7 Working Days",
     points: ["AS and A Levels",
 "Certificate/Award/Diploma",
@@ -175,7 +173,6 @@ const cardData = [
   },
   {
     title: "Cooperate",
-    rate: "£82",
     days: "5-7 Working Days",
     points: [
 "Articles of Association",
@@ -982,7 +979,7 @@ onClick={() => openCountryModal(c)}
 
     <Row className="justify-content-center">
       {[
-        { title: "Trusted & Experienced", desc: "We are a UK government-approved service with years of specialised expertise, dedicated to providing reliable, professional, and efficient support for all your document legalisation and certification needs.", icon: "🏛️" },
+        { title: "Trusted & Experienced", desc: "We are  UK government-approved service with years of specialised expertise, dedicated to providing reliable, professional, and efficient support for all your document legalisation and certification needs.", icon: "🏛️" },
         { title: "Fast & Efficient", desc: "We offer dependable apostille services, ensuring your important documents are legalised securely and accurately within 5–7 working days without compromising on quality or safety.", icon: "⚡" },
         { title: "Secure & Confidential", desc: "We manage your documents with the highest level of care and strict confidentiality, ensuring they are protected, secure, and handled professionally throughout the entire process.", icon: "🔒" },
         { title: "Client-focused Support", desc: "We provide expert guidance and hands-on assistance at every step of the process, ensuring you understand each stage and your documents are handled smoothly from start to finish.", icon: "🤝" },

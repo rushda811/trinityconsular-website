@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import homeimage from "../assets/homeimage.jpeg";
 import dhl from "../assets/dhl.webp";
-import degree from "../assets/degree.jpg";
+import degree from "../assets/degree.png";
 import birth from "../assets/birth.jpg";
 import london from "../assets/london.webp";
 import pg from "../assets/pg.jpg";
 import poa from "../assets/poa.jpg";
 import { motion } from "framer-motion";
 import worldmap from "../assets/worldmap.jpg";
+import WhatsAppButton from "./WhatsAppButton"; 
 import WizardEnquiryModal from "./WizardEnquiryModal";
 import React, { useRef, useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -55,7 +56,7 @@ const certificates = [
   },
   {
     img: poa,
-    type: "Apostilled",
+    type: " UAE Embassy Legalised",
     caption: "Power of Attorney – Apostilled",
   },
 ];
@@ -478,7 +479,7 @@ wrapper.style.transformOrigin = "top center";
     transition: "transform 0.3s ease, box-shadow 0.3s ease", // keep only transform/box-shadow for hover
     width: "250px",
     margin: "0 auto",
-    background: "linear-gradient(135deg, #1E3A8A, #2563EB, #3B82F6)", // fixed blue gradient
+    background: "linear-gradient(135deg, #1E3B60 0%, #0A1626 100%)", // fixed blue gradient
     color: "#fff",
     boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
   }}
@@ -892,7 +893,7 @@ wrapper.style.transformOrigin = "top center";
   show={showEnquiryModal}
   handleClose={() => setShowEnquiryModal(false)}
 />
-
+<WhatsAppButton />
 
       {/* Keyframes & Styles */}
       <style>{`

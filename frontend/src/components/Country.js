@@ -101,7 +101,7 @@ documents: [
     details: {
       process: [
         { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
-        { step: 2, title: "EJordan Embassy Authentication", description: "We handle submission to the Jordanian Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Jordan." },
+        { step: 2, title: "Jordan Embassy Authentication", description: "We handle submission to the Jordanian Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Jordan." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Jordan—without any hassle for you." }
       ],
 documents: [
@@ -211,18 +211,16 @@ documents: [
     details: {
       process: [
         { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by the relevant local authorities to confirm authenticity." },
-        { step: 2, title: "MEA Apostille in India", description: "We arrange for your documents to be apostilled by the Ministry of External Affairs (MEA) in India. This official certificate confirms authenticity and is accepted across all Hague Convention countries." },
+        { step: 2, title: "MEA Apostille in India", description: "For OCI applications based on Indian parentage, we assist in verifying and preparing Apostille on your child’s birth certificate. This ensures smooth submission and acceptance by the authorities." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once apostilled, we ensure safe return of your documents—ready for official, educational, or business use abroad." }
       ],
 documents: [
   "For OCI applications based on Indian parentage, your UK birth certificate must be apostilled",
   "Original documents (scanned copies of Birth, Marriage, Death certificates, and Police Clearance are not accepted)",
   "Passport copy of the applicant or authorised signatory",
-  "Notarisation/attestation from home country authorities (if required)",
-  "Certified Hindi or English translation (if applicable)",
-  "Applicable MEA fees and processing time"
+  "Notarisation/attestation from home country authorities (if required)"
 ],
-      pricing: "Personal/educational/commercial: £82  Requires Apostille only",
+      pricing: ["Personal","educational","commercial",": £82  Requires Apostille only"],
       EstimatedProcessing: "Processing takes about 3-5 business days."
     }
   },

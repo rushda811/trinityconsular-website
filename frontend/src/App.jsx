@@ -12,8 +12,9 @@ import UKApostille from "./components/UK";
 import ShuttleService from "./components/shuttle";
 import EmbassyLegalisation from "./components/embassy";   // <-- added this
 import CountryTicker from "./components/CountryTicker";
-import { preloadImages } from "./preloadImages";
+import { preloadAllImages } from "./utils/preloadAllImages";
 import { useEffect } from "react";
+
 
 // Helper for scroll to top
 function AppRoutes() {
@@ -36,15 +37,16 @@ function AppRoutes() {
 }
 
 export default function App() {
-  useEffect(() => {
-    preloadImages(); // runs once on mount
+   useEffect(() => {
+    preloadAllImages();
   }, []);
+
   return (
     <Router>
       <div className="d-flex flex-column">
         <Navbar />
         <div style={{paddingTop: "75px" }}> 
-        <CountryTicker />   {/* ticker goes here */}
+        <CountryTicker />  
         <div style={{flexGrow:0}} >
           <AppRoutes />
         </div>

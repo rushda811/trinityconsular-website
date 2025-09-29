@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "../assets/logo.jpg";
+
 
 function Footer() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,11 +24,6 @@ function Footer() {
   const linkHover = {
     scale: 1.1,
     color: "#FF8C5A",
-    transition: { duration: 0.3 },
-  };
-
-  const logoHover = {
-    scale: 1.2,
     transition: { duration: 0.3 },
   };
 
@@ -54,24 +49,6 @@ function Footer() {
     >
       <Container>
         <Row className="mb-4 align-items-center">
-          <Col xs={12} md={4} className="d-flex justify-content-center mb-3 mb-md-0">
-            <Link to="/" style={{ display: "inline-block" }}>
-              <motion.img
-                src={logo}
-                alt="Logo"
-                whileHover={logoHover}
-                style={{
-                  width: scrolled ? "120px" : "150px",
-                  height: scrolled ? "120px" : "150px",
-                  objectFit: "contain",
-                  transition: "width 0.4s ease, height 0.4s ease",
-                  cursor: "pointer",
-                  maxWidth: "80%",
-                }}
-              />
-            </Link>
-          </Col>
-
           <Col xs={12} md={4} className="mb-3 mb-md-0">
             <h5 style={headingStyle}>Quick Links</h5>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>

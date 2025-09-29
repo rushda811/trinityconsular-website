@@ -10,7 +10,7 @@ import WizardEnquiryModal from "./WizardEnquiryModal";
 const THREE_STEPS = [
   {
     title: "Easy Booking",
-    desc: "Book your shuttle in just a few clicks via our website or app. Choose your pickup location, time, and destination effortlessly.",
+    desc: "Book your shuttle in just a few clicks via our website. Choose your pickup location, time, and destination effortlessly.",
     icon: <FaRegCalendarCheck size={60} color="#000" />,   // Big black icon
   },
   {
@@ -20,7 +20,7 @@ const THREE_STEPS = [
   },
   {
     title: "On-Time Drop-off",
-    desc:"Experience spacious seating, advanced climate control, and meticulously clean vehicles, all thoughtfully designed to provide a comfortable, relaxing, and enjoyable journey from start to finish.",
+    desc:"We offer a convenient door-to-door service: we’ll collect your documents and deliver them back to you once processing is complete, at the location of your choice.",
     icon: <FaMapMarkerAlt size={60} color="#000" />,
   },
 ];

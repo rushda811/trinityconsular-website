@@ -258,74 +258,89 @@ await axios.post("https://trinityconsular-website.onrender.com/api/enquiry/", pa
                 </motion.div>
               )}
 
-              {/* Step 2 */}
-              {step === 2 && (
-                <motion.div key="step2" variants={stepVariants} initial="enter" animate="center" exit="exit">
-                  <h3 style={{ textAlign: "center",fontFamily: "'DM Serif Text', serif" , marginBottom: "25px", color: darkBlue, fontWeight: "bold" }}>
-                    Document Details
-                  </h3>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Type of Document *</Form.Label>
-                    <Form.Control
-                      type="text"
-                      value={formData.document_type}
-                      onChange={handleChange}
-                      name="document_type"
-                      placeholder="Enter type of document"
-                    />
-                    {!formData.document_type && showErrors && <div style={{ color: "red" }}>Required</div>}
-                  </Form.Group>
+             {/* Step 2 */}
+{step === 2 && (
+  <motion.div key="step2" variants={stepVariants} initial="enter" animate="center" exit="exit">
+    <h3
+      style={{
+        textAlign: "center",
+        fontFamily: "'DM Serif Text', serif",
+        marginBottom: "25px",
+        color: darkBlue,
+        fontWeight: "bold",
+      }}
+    >
+      Document Details
+    </h3>
 
-                  <AnimatedDropdown
-                    value={formData.attested_as}
-                    onChange={(val) => setFormData({ ...formData, attested_as: val })}
-                    options={["Original", "True Copy"]}
-                    placeholder="Document Attested As"
-                  />
-                  {!formData.attested_as && showErrors && <div style={{ color: "red" }}>Required</div>}
+    {/* Remove Type of Document for Shuttle Services */}
+    {service !== "Shuttle Services" && (
+      <Form.Group className="mb-3">
+        <Form.Label>Type of Document *</Form.Label>
+        <Form.Control
+          type="text"
+          value={formData.document_type}
+          onChange={handleChange}
+          name="document_type"
+          placeholder="Enter type of document"
+        />
+        {!formData.document_type && showErrors && <div style={{ color: "red" }}>Required</div>}
+      </Form.Group>
+    )}
 
-                  <Form.Group className="mb-3">
-                    <Form.Label>Quantity *</Form.Label>
-                    <Form.Control
-                      type="number"
-                      min="1"
-                      value={formData.quantity}
-                      onChange={handleChange}
-                      name="quantity"
-                      placeholder="Enter quantity"
-                    />
-                    {!formData.quantity && showErrors && <div style={{ color: "red" }}>Required</div>}
-                  </Form.Group>
+    <AnimatedDropdown
+      value={formData.attested_as}
+      onChange={(val) => setFormData({ ...formData, attested_as: val })}
+      options={["Original", "True Copy"]}
+      placeholder="Document Attested As"
+    />
+    {!formData.attested_as && showErrors && <div style={{ color: "red" }}>Required</div>}
 
-                  <Form.Group className="mb-3">
-                    <Form.Label>Additional Information</Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      rows={3}
-                      value={formData.additional_info}
-                      onChange={handleChange}
-                      name="additional_info"
-                      placeholder="Optional"
-                    />
-                  </Form.Group>
+    <Form.Group className="mb-3">
+      <Form.Label>Quantity *</Form.Label>
+      <Form.Control
+        type="number"
+        min="1"
+        value={formData.quantity}
+        onChange={handleChange}
+        name="quantity"
+        placeholder="Enter quantity"
+      />
+      {!formData.quantity && showErrors && <div style={{ color: "red" }}>Required</div>}
+    </Form.Group>
 
-                  <div style={{ marginTop: "20px", textAlign: "right" }}>
-                    <Button variant="secondary" onClick={handlePrev} style={{ marginRight: "15px" }}>
-                      Previous
-                    </Button>
-                    <Button
-                      style={buttonStyle}
-                      onClick={() => {
-                        const required = ["document_type", "attested_as", "quantity"];
-                        if (required.every((f) => formData[f] !== "")) handleNext();
-                        else setShowErrors(true);
-                      }}
-                    >
-                      Next
-                    </Button>
-                  </div>
-                </motion.div>
-              )}
+    <Form.Group className="mb-3">
+      <Form.Label>Additional Information</Form.Label>
+      <Form.Control
+        as="textarea"
+        rows={3}
+        value={formData.additional_info}
+        onChange={handleChange}
+        name="additional_info"
+        placeholder="Optional"
+      />
+    </Form.Group>
+
+    <div style={{ marginTop: "20px", textAlign: "right" }}>
+      <Button variant="secondary" onClick={handlePrev} style={{ marginRight: "15px" }}>
+        Previous
+      </Button>
+      <Button
+        style={buttonStyle}
+        onClick={() => {
+          const required =
+            service === "Shuttle Services"
+              ? ["attested_as", "quantity"]
+              : ["document_type", "attested_as", "quantity"];
+          if (required.every((f) => formData[f] !== "")) handleNext();
+          else setShowErrors(true);
+        }}
+      >
+        Next
+      </Button>
+    </div>
+  </motion.div>
+)}
 
               {/* Step 3 */}
               {step === 3 && (
