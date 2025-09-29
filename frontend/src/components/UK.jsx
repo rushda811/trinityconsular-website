@@ -33,7 +33,7 @@ const THREE_STEPS = [
 ];
 
 const FAQ_ITEMS = [
-  { question: "What is a UK Apostille?", answer: "A UK Apostille is a government certificate that authenticates a document for use in a foreign country that is a signatory to the Hague Apostille Convention." },
+  { question: "What is UK Apostille?", answer: "UK Apostille is a government certificate that authenticates a document for use in a foreign country that is a signatory to the Hague Apostille Convention." },
   { question: "Which documents can be apostilled?", answer: "Common documents include birth certificates, marriage certificates, degrees, cooperate documents, and powers of attorney." },
   { question: "How long does the process take?", answer: "We are an approved Foreign Office provider of next-day apostille services." },
   { question: "Can I apostille documents for any country?", answer: "Apostille is valid for countries under the Hague Convention. Non-member countries need embassy legalisation." },
