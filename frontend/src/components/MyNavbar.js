@@ -33,6 +33,11 @@ function MyNavbar() {
     { name: "Embassy Legalisation", path: "/embassy-legalisation" },
     { name: "Shuttle Service", path: "/shuttle-service" },
   ];
+  // ✅ Add this function
+  const handleNavClick = () => {
+    setExpanded(false); // close the navbar
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top smoothly
+  };
 
   return (
     <>
@@ -160,12 +165,12 @@ function MyNavbar() {
               </div>
 
 
-              
+
 <motion.div whileHover={navLinkHover}>
   <Nav.Link
     as={Link}
     to="/about"
-    onClick={() => setExpanded(false)}
+    onClick={handleNavClick}
     style={commonLinkStyle}
   >
     About
@@ -176,13 +181,12 @@ function MyNavbar() {
   <Nav.Link
     as={Link}
     to="/contact"
-    onClick={() => setExpanded(false)}
+    onClick={handleNavClick}
     style={commonLinkStyle}
   >
     Contact
   </Nav.Link>
 </motion.div>
-
 
 
               {/* Get Started Button */}
