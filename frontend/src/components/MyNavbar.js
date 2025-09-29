@@ -160,27 +160,28 @@ function MyNavbar() {
                 </AnimatePresence>
               </div>
 
-<motion.div whileHover={navLinkHover}>
-  <Nav.Link
-    as={Link}
-    to="/about"
-    onClick={() => setExpanded(false)}
-    style={commonLinkStyle}
-  >
+<Nav.Link
+  as={Link}
+  to="/about"
+  onClick={() => setExpanded(false)}
+  style={commonLinkStyle}
+>
+  <motion.span whileHover={navLinkHover}>
     About
-  </Nav.Link>
-</motion.div>
+  </motion.span>
+</Nav.Link>
 
-<motion.div whileHover={navLinkHover}>
-  <Nav.Link
-    as={Link}
-    to="/contact"
-    onClick={() => setExpanded(false)}
-    style={commonLinkStyle}
-  >
+<Nav.Link
+  as={Link}
+  to="/contact"
+  onClick={() => setExpanded(false)}
+  style={commonLinkStyle}
+>
+  <motion.span whileHover={navLinkHover}>
     Contact
-  </Nav.Link>
-</motion.div>
+  </motion.span>
+</Nav.Link>
+
 
 
               {/* Get Started Button */}
