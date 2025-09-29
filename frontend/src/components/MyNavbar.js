@@ -159,23 +159,30 @@ function MyNavbar() {
                 </AnimatePresence>
               </div>
 
-<motion.div 
-  whileHover={navLinkHover} 
-  onClick={() => setExpanded(false)}
+<motion.div
+  whileHover={navLinkHover}
+  onClick={() => {
+    setExpanded(false); // collapse navbar
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top
+  }}
 >
   <Nav.Link as={Link} to="/about" style={commonLinkStyle}>
     About
   </Nav.Link>
 </motion.div>
 
-<motion.div 
-  whileHover={navLinkHover} 
-  onClick={() => setExpanded(false)}
+<motion.div
+  whileHover={navLinkHover}
+  onClick={() => {
+    setExpanded(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
 >
   <Nav.Link as={Link} to="/contact" style={commonLinkStyle}>
     Contact
   </Nav.Link>
 </motion.div>
+
 
               {/* Get Started Button */}
 <motion.button
