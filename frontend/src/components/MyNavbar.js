@@ -45,6 +45,7 @@ function MyNavbar() {
         expand="lg"
         fixed="top"
         expanded={expanded}
+        onToggle={setExpanded} 
         style={{
           backgroundColor: scrolled ? "#E8F0FA" : "#F0F6FA",
           backdropFilter: "blur(6px)",
