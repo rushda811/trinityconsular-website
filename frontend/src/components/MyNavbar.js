@@ -158,16 +158,15 @@ function MyNavbar() {
                   )}
                 </AnimatePresence>
               </div>
+
+
+              
 <motion.div whileHover={navLinkHover}>
   <Nav.Link
     as={Link}
     to="/about"
+    onClick={() => setExpanded(false)}
     style={commonLinkStyle}
-    onClick={() => {
-  setExpanded(false);
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}}
-
   >
     About
   </Nav.Link>
@@ -177,12 +176,8 @@ function MyNavbar() {
   <Nav.Link
     as={Link}
     to="/contact"
+    onClick={() => setExpanded(false)}
     style={commonLinkStyle}
-   onClick={() => {
-  setExpanded(false);
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}}
-
   >
     Contact
   </Nav.Link>
