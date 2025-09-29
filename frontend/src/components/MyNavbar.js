@@ -160,7 +160,6 @@ function MyNavbar() {
                 </AnimatePresence>
               </div>
 
-
 <motion.div whileHover={navLinkHover}>
   <Nav.Link
     as={Link}
