@@ -41,8 +41,10 @@ useEffect(() => {
 
 
 const handleNavClick = () => {
-  if (expanded) setExpanded(false); // only close if navbar is open
+  setExpanded(false);       // close hamburger menu
+  setServicesOpen(false);   // close Services dropdown if open
 };
+
 
 
   return (
@@ -176,9 +178,7 @@ const handleNavClick = () => {
   onClick={handleNavClick}
   style={commonLinkStyle}
 >
-  <motion.span whileHover={navLinkHover}>
-    About
-  </motion.span>
+  About
 </Nav.Link>
 
 <Nav.Link
@@ -187,11 +187,8 @@ const handleNavClick = () => {
   onClick={handleNavClick}
   style={commonLinkStyle}
 >
-  <motion.span whileHover={navLinkHover}>
-    Contact
-  </motion.span>
+  Contact
 </Nav.Link>
-
 
 
               {/* Get Started Button */}
