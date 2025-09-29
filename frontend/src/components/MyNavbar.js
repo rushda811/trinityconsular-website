@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import WizardEnquiryModal from "./WizardEnquiryModal";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.jpg";
+import { useLocation } from "react-router-dom";
 
 function MyNavbar() {
   const [expanded, setExpanded] = useState(false);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -33,6 +35,9 @@ function MyNavbar() {
     { name: "Embassy Legalisation", path: "/embassy-legalisation" },
     { name: "Shuttle Service", path: "/shuttle-service" },
   ];
+useEffect(() => {
+  setExpanded(false);
+}, [location.pathname]);
 
   return (
     <>
@@ -163,7 +168,6 @@ function MyNavbar() {
 <Nav.Link
   as={Link}
   to="/about"
-  onClick={() => setExpanded(false)}
   style={commonLinkStyle}
 >
   <motion.span whileHover={navLinkHover}>
@@ -174,7 +178,6 @@ function MyNavbar() {
 <Nav.Link
   as={Link}
   to="/contact"
-  onClick={() => setExpanded(false)}
   style={commonLinkStyle}
 >
   <motion.span whileHover={navLinkHover}>
