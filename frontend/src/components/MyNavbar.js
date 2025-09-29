@@ -39,13 +39,18 @@ useEffect(() => {
   setExpanded(false);
 }, [location.pathname]);
 
+
+const handleNavClick = () => {
+  if (expanded) setExpanded(false); // only close if navbar is open
+};
+
+
   return (
     <>
       <Navbar
         expand="lg"
         fixed="top"
         expanded={expanded}
-        onToggle={setExpanded} 
         style={{
           backgroundColor: scrolled ? "#E8F0FA" : "#F0F6FA",
           backdropFilter: "blur(6px)",
@@ -168,6 +173,7 @@ useEffect(() => {
 <Nav.Link
   as={Link}
   to="/about"
+  onClick={handleNavClick}
   style={commonLinkStyle}
 >
   <motion.span whileHover={navLinkHover}>
@@ -178,6 +184,7 @@ useEffect(() => {
 <Nav.Link
   as={Link}
   to="/contact"
+  onClick={handleNavClick}
   style={commonLinkStyle}
 >
   <motion.span whileHover={navLinkHover}>
