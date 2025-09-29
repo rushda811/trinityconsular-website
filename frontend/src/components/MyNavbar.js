@@ -33,11 +33,6 @@ function MyNavbar() {
     { name: "Embassy Legalisation", path: "/embassy-legalisation" },
     { name: "Shuttle Service", path: "/shuttle-service" },
   ];
-  // ✅ Add this function
-  const handleNavClick = () => {
-    setExpanded(false); // close the navbar
-    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top smoothly
-  };
 
   return (
     <>
@@ -166,25 +161,28 @@ function MyNavbar() {
               </div>
 
 
-<Nav.Link
-  as={motion(Link)}
-  to="/about"
-  whileHover={navLinkHover}
-  onClick={() => setExpanded(false)}
-  style={commonLinkStyle}
->
-  About
-</Nav.Link>
+<motion.div whileHover={navLinkHover}>
+  <Nav.Link
+    as={Link}
+    to="/about"
+    onClick={() => setExpanded(false)}
+    style={commonLinkStyle}
+  >
+    About
+  </Nav.Link>
+</motion.div>
 
-<Nav.Link
-  as={motion(Link)}
-  to="/contact"
-  whileHover={navLinkHover}
-  onClick={() => setExpanded(false)}
-  style={commonLinkStyle}
->
-  Contact
-</Nav.Link>
+<motion.div whileHover={navLinkHover}>
+  <Nav.Link
+    as={Link}
+    to="/contact"
+    onClick={() => setExpanded(false)}
+    style={commonLinkStyle}
+  >
+    Contact
+  </Nav.Link>
+</motion.div>
+
 
               {/* Get Started Button */}
 <motion.button
