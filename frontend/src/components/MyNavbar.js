@@ -165,29 +165,25 @@ function MyNavbar() {
               </div>
 
 
+<Nav.Link
+  as={motion(Link)}
+  to="/about"
+  whileHover={navLinkHover}
+  onClick={() => setExpanded(false)}
+  style={commonLinkStyle}
+>
+  About
+</Nav.Link>
 
-<motion.div whileHover={navLinkHover}>
-  <Nav.Link
-    as={Link}
-    to="/about"
-    onClick={handleNavClick}
-    style={commonLinkStyle}
-  >
-    About
-  </Nav.Link>
-</motion.div>
-
-<motion.div whileHover={navLinkHover}>
-  <Nav.Link
-    as={Link}
-    to="/contact"
-    onClick={handleNavClick}
-    style={commonLinkStyle}
-  >
-    Contact
-  </Nav.Link>
-</motion.div>
-
+<Nav.Link
+  as={motion(Link)}
+  to="/contact"
+  whileHover={navLinkHover}
+  onClick={() => setExpanded(false)}
+  style={commonLinkStyle}
+>
+  Contact
+</Nav.Link>
 
               {/* Get Started Button */}
 <motion.button
