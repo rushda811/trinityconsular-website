@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 import WizardEnquiryModal from "./WizardEnquiryModal";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.jpg";
-import { useLocation } from "react-router-dom";
 
 function MyNavbar() {
   const [expanded, setExpanded] = useState(false);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-const location = useLocation();
 
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -26,8 +25,6 @@ const location = useLocation();
     transition: { duration: 0.3 },
   };
 
-
-
   const commonLinkStyle = { fontWeight: 500, color: "#1A3C8A" };
 
   const services = [
@@ -35,17 +32,12 @@ const location = useLocation();
     { name: "Embassy Legalisation", path: "/embassy-legalisation" },
     { name: "Shuttle Service", path: "/shuttle-service" },
   ];
-useEffect(() => {
-  setExpanded(false);
-}, [location.pathname]);
 
-
-const handleNavClick = () => {
-  setExpanded(false);       // close hamburger menu
-  setServicesOpen(false);   // close Services dropdown if open
-};
-
-
+  // ✅ Click handler to close navbar and dropdown
+  const handleNavClick = () => {
+    setExpanded(false);
+    setServicesOpen(false);
+  };
 
   return (
     <>
@@ -78,7 +70,7 @@ const handleNavClick = () => {
             />
           </Navbar.Brand>
 
-          {/* 🔹 Professional Hamburger */}
+          {/* Hamburger */}
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={() => setExpanded(!expanded)}
@@ -91,13 +83,9 @@ const handleNavClick = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto d-flex align-items-center gap-3">
+              {/* Home */}
               <motion.div whileHover={navLinkHover}>
-                <Nav.Link
-                  as={Link}
-                  to="/"
-                  onClick={() => setExpanded(false)}
-                  style={commonLinkStyle}
-                >
+                <Nav.Link as={Link} to="/" onClick={handleNavClick} style={commonLinkStyle}>
                   Home
                 </Nav.Link>
               </motion.div>
@@ -144,8 +132,7 @@ const handleNavClick = () => {
                           key={index}
                           whileHover={{
                             scale: 1.03,
-                            background:
-                              "linear-gradient(90deg, #FF6B4A, #FF914D)",
+                            background: "linear-gradient(90deg, #FF6B4A, #FF914D)",
                             color: "#fff",
                             transition: { duration: 0.3 },
                           }}
@@ -153,10 +140,7 @@ const handleNavClick = () => {
                           <Nav.Link
                             as={Link}
                             to={item.path}
-                            onClick={() => {
-                              setServicesOpen(false);
-                              setExpanded(false);
-                            }}
+                            onClick={handleNavClick}
                             style={{
                               padding: "0.6rem 1rem",
                               color: "#1A3C8A",
@@ -172,69 +156,53 @@ const handleNavClick = () => {
                 </AnimatePresence>
               </div>
 
-<Nav.Link
-  as={Link}
-  to="/about"
-  onClick={handleNavClick}
-  style={commonLinkStyle}
->
-  About
-</Nav.Link>
+              {/* About */}
+              <Nav.Link as={Link} to="/about" onClick={handleNavClick} style={commonLinkStyle}>
+                About
+              </Nav.Link>
 
-<Nav.Link
-  as={Link}
-  to="/contact"
-  onClick={handleNavClick}
-  style={commonLinkStyle}
->
-  Contact
-</Nav.Link>
-
+              {/* Contact */}
+              <Nav.Link as={Link} to="/contact" onClick={handleNavClick} style={commonLinkStyle}>
+                Contact
+              </Nav.Link>
 
               {/* Get Started Button */}
-<motion.button
-  onClick={() => setShowEnquiryModal(true)}
-  initial={{ scale: 1 }}
-  whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(255,140,90,0.5)" }}
-  whileTap={{ scale: 0.95 }}
-  className="navbar-btn"
-  style={{
-    color: "#fff",
-    fontWeight: "bold",
-    fontSize: "1.1rem", // bigger text
-    padding: scrolled ? "0.5rem 1.5rem" : "0.7rem 2rem", // more padding
-    marginLeft: "1rem",
-    borderRadius: "10px", // slightly bigger
-    border: "none",
-    background:
-      "linear-gradient(270deg, #FF6B4A, #FF914D, #FFB36B, #FF914D)",
-    backgroundSize: "400% 100%",
-    animation: "gradientMove 4s linear infinite",
-    cursor: "pointer",
-    outline: "none",
-    boxShadow: "none",
-  }}
->
-  Get Started
-</motion.button>
-
-
-<style>
-  {`
-    .navbar-btn:focus,
-    .navbar-btn:active,
-    .navbar-btn:focus-visible {
-      outline: none !important;
-      box-shadow: none !important;
-    }
-  `}
-</style>
-
-
-
-
-</Nav>
-</Navbar.Collapse>
+              <motion.button
+                onClick={() => setShowEnquiryModal(true)}
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(255,140,90,0.5)" }}
+                whileTap={{ scale: 0.95 }}
+                className="navbar-btn"
+                style={{
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                  padding: scrolled ? "0.5rem 1.5rem" : "0.7rem 2rem",
+                  marginLeft: "1rem",
+                  borderRadius: "10px",
+                  border: "none",
+                  background: "linear-gradient(270deg, #FF6B4A, #FF914D, #FFB36B, #FF914D)",
+                  backgroundSize: "400% 100%",
+                  animation: "gradientMove 4s linear infinite",
+                  cursor: "pointer",
+                  outline: "none",
+                  boxShadow: "none",
+                }}
+              >
+                Get Started
+              </motion.button>
+              <style>
+                {`
+                  .navbar-btn:focus,
+                  .navbar-btn:active,
+                  .navbar-btn:focus-visible {
+                    outline: none !important;
+                    box-shadow: none !important;
+                  }
+                `}
+              </style>
+            </Nav>
+          </Navbar.Collapse>
 
           <style>
             {`
@@ -244,9 +212,6 @@ const handleNavClick = () => {
                 100% { background-position: 0% 50%; }
               }
 
-         
-
-              /* Professional Hamburger - no grey box */
               .custom-toggler {
                 border: none !important;
                 background: transparent !important;
@@ -262,11 +227,7 @@ const handleNavClick = () => {
                 transition: transform 0.3s ease;
                 gap: 6px;
               }
-
-              .custom-toggler:hover {
-                transform: scale(1.1);
-              }
-
+              .custom-toggler:hover { transform: scale(1.1); }
               .custom-toggler .bar {
                 height: 3px;
                 width: 100%;
@@ -274,45 +235,21 @@ const handleNavClick = () => {
                 border-radius: 4px;
                 transition: all 0.4s ease;
               }
-
-              .custom-toggler:hover .bar {
-                background-color: #FF8C5A;
-              }
-
-              .custom-toggler.open .bar:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-              }
-              .custom-toggler.open .bar:nth-child(2) {
-                opacity: 0;
-              }
-              .custom-toggler.open .bar:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
-              }
-
+              .custom-toggler:hover .bar { background-color: #FF8C5A; }
+              .custom-toggler.open .bar:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+              .custom-toggler.open .bar:nth-child(2) { opacity: 0; }
+              .custom-toggler.open .bar:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
               @media (max-width: 768px) {
-                .custom-toggler {
-                  height: 40px;
-                  width: 40px;
-                  gap: 7px;
-                }
-
-                .custom-toggler .bar {
-                  height: 3.5px;
-                }
-
-                .custom-toggler:hover {
-                  transform: scale(1.15);
-                }
+                .custom-toggler { height: 40px; width: 40px; gap: 7px; }
+                .custom-toggler .bar { height: 3.5px; }
+                .custom-toggler:hover { transform: scale(1.15); }
               }
             `}
           </style>
         </Container>
       </Navbar>
 
-      <WizardEnquiryModal
-        show={showEnquiryModal}
-        handleClose={() => setShowEnquiryModal(false)}
-      />
+      <WizardEnquiryModal show={showEnquiryModal} handleClose={() => setShowEnquiryModal(false)} />
     </>
   );
 }
