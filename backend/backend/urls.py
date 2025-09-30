@@ -4,6 +4,10 @@ from rest_framework import routers
 from django.views.static import serve
 from django.conf import settings
 from main.views import ServiceViewSet, ContactViewSet, EnquiryCreateAPIView, index
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 # DRF router
 router = routers.DefaultRouter()
@@ -21,6 +25,11 @@ urlpatterns = [
     path('manifest.json', lambda request: serve(request, 'manifest.json', document_root=settings.FRONTEND_BUILD_DIR)),
     path('favicon.ico', lambda request: serve(request, 'favicon.ico', document_root=settings.FRONTEND_BUILD_DIR)),
     path('logo192.png', lambda request: serve(request, 'logo192.png', document_root=settings.FRONTEND_BUILD_DIR)),
+
+    # JWT token endpoints
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
 
 ]
 
