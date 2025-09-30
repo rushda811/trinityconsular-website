@@ -1,4 +1,5 @@
 from rest_framework import viewsets, status
+from rest_framework.permissions import IsAuthenticated  
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.core.mail import EmailMessage, get_connection, send_mail
@@ -32,11 +33,12 @@ def index(request):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
+    permission_classes = [IsAuthenticated]
 
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
-
+    permission_classes = [IsAuthenticated]
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
@@ -59,6 +61,7 @@ class ContactViewSet(viewsets.ModelViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class EnquiryCreateAPIView(APIView):
+    permission_classes = [IsAuthenticated]
     def post(self, request):
         serializer = EnquirySerializer(data=request.data)
         if serializer.is_valid():
