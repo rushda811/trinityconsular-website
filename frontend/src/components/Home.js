@@ -148,7 +148,11 @@ function Home() {
 
 
 useEffect(() => {
-  fetch("https://trinityconsular-website.onrender.com/api/services/")
+  fetch("https://trinityconsular-website.onrender.com/api/services/",{  headers: {
+      "x-api-key": "my-super-secret-key",
+      "Content-Type": "application/json"
+    },
+  })
     .then((res) => res.json())
     .then((data) => setServices(data))
     .catch((err) => console.error("Error loading services:", err));

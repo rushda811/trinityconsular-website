@@ -167,7 +167,14 @@ function WizardEnquiryModal({ show = false, handleClose }) {
     e.preventDefault();
     try {
       const payload = { service, ...formData, quantity: parseInt(formData.quantity, 10) };
-await axios.post("https://trinityconsular-website.onrender.com/api/enquiry/", payload);
+await axios.post("https://trinityconsular-website.onrender.com/api/enquiry/",  payload,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": "my-super-secret-key", // Your actual API key
+        },
+      }
+    );
       setSubmitted(true);
       setTimeout(handleCloseModal, 5000);
     } catch (err) {
