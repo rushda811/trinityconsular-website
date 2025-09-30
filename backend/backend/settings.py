@@ -7,7 +7,7 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "fallback-secret")
+SECRET_KEY = 'django-insecure-58h69zc-t#^i*slwuioh5x0b@zqb+%ke(+d^@cystcp5dyo+!('
 DEBUG = False
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "trinityconsular-website.onrender.com"]
 
@@ -42,14 +42,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'backend.urls'
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-import dj_database_url
-
+# Database
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
