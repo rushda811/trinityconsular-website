@@ -4,19 +4,11 @@ from rest_framework.response import Response
 from django.core.mail import EmailMessage, get_connection, send_mail
 from django.conf import settings
 from django.http import HttpResponse, Http404
-from rest_framework.exceptions import PermissionDenied
 import os
 import threading
 from django.views.decorators.cache import never_cache
 from .models import Service, Contact
 from .serializers import EnquirySerializer, ServiceSerializer, ContactSerializer
-API_SECRET_KEY = os.environ.get("API_SECRET_KEY")  # make sure this exists in Render env
-class APIKeyRequiredMixin:
-    def initial(self, request, *args, **kwargs):
-        key = request.headers.get("x-api-key")  # Frontend must send this header
-        if key != API_SECRET_KEY:
-            raise PermissionDenied("Unauthorized: Invalid API Key")
-        super().initial(request, *args, **kwargs)
 
 # Send email async
 def send_email_async(subject, message, from_email, recipient_list):
@@ -37,11 +29,11 @@ def index(request):
         raise Http404("React build index.html not found")
 
 # API ViewSets
-class ServiceViewSet(APIKeyRequiredMixin,viewsets.ModelViewSet):
+class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
-class ContactViewSet(APIKeyRequiredMixin,viewsets.ModelViewSet):
+class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
@@ -66,7 +58,7 @@ class ContactViewSet(APIKeyRequiredMixin,viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class EnquiryCreateAPIView(APIKeyRequiredMixin,APIView):
+class EnquiryCreateAPIView(APIView):
     def post(self, request):
         serializer = EnquirySerializer(data=request.data)
         if serializer.is_valid():

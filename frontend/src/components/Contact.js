@@ -41,9 +41,7 @@ function Contact() {
 const res = await fetch("https://trinityconsular-website.onrender.com/api/contacts/", {
 
         method: "POST",
-        headers: { "Content-Type": "application/json",
-           "x-api-key": "my-super-secret-key",
-         },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       if (res.ok) {
