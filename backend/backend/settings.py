@@ -7,11 +7,23 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-58h69zc-t#^i*slwuioh5x0b@zqb+%ke(+d^@cystcp5dyo+!('
-DEBUG = False
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "trinityconsular-website.onrender.com"]
+# -----------------------
+# SECURITY SETTINGS
+# -----------------------
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "fallback-secret-key"  # only used if env var missing; replace in Render
+)
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-# Application definition
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS",
+    "trinityconsular-website.onrender.com,127.0.0.1,localhost"
+).split(",")
+
+# -----------------------
+# APPLICATION DEFINITION
+# -----------------------
 INSTALLED_APPS = [
     'colorfield',
     'admin_interface',
@@ -28,7 +40,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # must be right after SecurityMiddleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # right after SecurityMiddleware
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -38,11 +50,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 ROOT_URLCONF = 'backend.urls'
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-# Database
+# -----------------------
+# DATABASE
+# -----------------------
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -50,7 +63,9 @@ DATABASES = {
     }
 }
 
-# Password validation
+# -----------------------
+# PASSWORD VALIDATION
+# -----------------------
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -58,7 +73,9 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Email configuration
+# -----------------------
+# EMAIL CONFIGURATION
+# -----------------------
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -70,10 +87,14 @@ ADMIN_EMAIL = 'info@trinityconsular.com'
 SITE_NAME = 'Trinity Consular'
 CONTACT_NUMBER = '+44 7440076614'
 
-# React frontend build folder
+# -----------------------
+# FRONTEND BUILD
+# -----------------------
 FRONTEND_BUILD_DIR = os.path.join(BASE_DIR, 'frontend_build')
 
-# Templates
+# -----------------------
+# TEMPLATES
+# -----------------------
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -89,24 +110,47 @@ TEMPLATES = [
     },
 ]
 
-# Static files
+# -----------------------
+# STATIC FILES
+# -----------------------
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(FRONTEND_BUILD_DIR, 'static')
-]
+STATICFILES_DIRS = [os.path.join(FRONTEND_BUILD_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+# -----------------------
 # CORS
+# -----------------------
 CORS_ALLOWED_ORIGINS = [
     "https://trinityconsular-website.onrender.com",
-    "http://127.0.0.1:8000",
-    "http://localhost:8000",
 ]
 
-# Default primary key field type
+# -----------------------
+# REST FRAMEWORK — Option A
+# -----------------------
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",  # use Django admin session
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAdminUser",  # only admin/staff can access API
+    ),
+}
+
+# Disable browsable API in production
+if not DEBUG:
+    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
+        "rest_framework.renderers.JSONRenderer",
+    ]
+
+# -----------------------
+# DEFAULT PRIMARY KEY
+# -----------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# -----------------------
+# SECURITY MIDDLEWARE SETTINGS
+# -----------------------
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 CSRF_COOKIE_SECURE = True
