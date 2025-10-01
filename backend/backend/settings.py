@@ -18,8 +18,9 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = os.environ.get(
     "ALLOWED_HOSTS",
-    "trinityconsular-website.onrender.com,127.0.0.1,localhost"
+    "trinityconsular-website.onrender.com,www.trinityconsular.com,127.0.0.1,localhost"
 ).split(",")
+
 
 # -----------------------
 # APPLICATION DEFINITION
