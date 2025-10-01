@@ -6,6 +6,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 import os
 import threading
+from rest_framework.permissions import IsAdminUser, AllowAny
 from django.views.decorators.cache import never_cache
 from .models import Service, Contact
 from .serializers import EnquirySerializer, ServiceSerializer, ContactSerializer
@@ -33,6 +34,11 @@ class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
+    def get_permissions(self):
+        if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
+            return [AllowAny()]
+        return [IsAdminUser()]
+    
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
