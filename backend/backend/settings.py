@@ -123,6 +123,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # -----------------------
 CORS_ALLOWED_ORIGINS = [
     "https://trinityconsular-website.onrender.com",
+    "https://www.trinityconsular.com",
+    "http://localhost:3000",
 ]
 
 # -----------------------
@@ -153,5 +155,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # -----------------------
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
+
