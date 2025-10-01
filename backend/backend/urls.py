@@ -4,7 +4,7 @@ from rest_framework import routers
 from django.views.static import serve
 from django.conf import settings
 from main.views import ServiceViewSet, ContactViewSet, EnquiryCreateAPIView, index
-
+from django.views.generic import TemplateView
 # DRF router
 router = routers.DefaultRouter()
 router.register(r'services', ServiceViewSet, basename='service')
@@ -21,6 +21,7 @@ urlpatterns = [
     path('manifest.json', lambda request: serve(request, 'manifest.json', document_root=settings.FRONTEND_BUILD_DIR)),
     path('favicon.ico', lambda request: serve(request, 'favicon.ico', document_root=settings.FRONTEND_BUILD_DIR)),
     path('logo192.png', lambda request: serve(request, 'logo192.png', document_root=settings.FRONTEND_BUILD_DIR)),
+     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 
 ]
 
