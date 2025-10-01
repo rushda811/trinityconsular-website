@@ -30,6 +30,7 @@ eth-typing==2.3.0
 eth-utils==1.9.5
 filelock==3.15.4
 frozenlist==1.4.1
+gunicorn==23.0.0
 hexbytes==0.3.1
 idna==3.8
 inflection==0.5.1
@@ -53,6 +54,7 @@ PyQRCode==1.2.1
 pyrsistent==0.20.0
 python-slugify==8.0.4
 pytz==2024.2
+pywin32==306
 PyYAML==6.0.2
 qrcode==7.4.2
 requests==2.32.3
@@ -69,6 +71,5 @@ varint==1.0.2
 virtualenv==20.26.3
 web3==5.28.0
 websockets==9.1
+whitenoise==6.11.0
 yarl==1.9.4
-gunicorn
-whitenoise
