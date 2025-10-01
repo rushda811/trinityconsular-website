@@ -6,6 +6,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 import os
 import threading
+from .permissions import AdminOnlyOr404 
 from rest_framework.permissions import IsAdminUser, AllowAny
 from django.views.decorators.cache import never_cache
 from .models import Service, Contact
@@ -33,7 +34,7 @@ def index(request):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
-
+    permission_classes = [AdminOnlyOr404]
     def get_permissions(self):
         if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
             return [AllowAny()]
@@ -42,7 +43,7 @@ class ServiceViewSet(viewsets.ModelViewSet):
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
-
+    permission_classes = [AdminOnlyOr404]
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
@@ -65,6 +66,7 @@ class ContactViewSet(viewsets.ModelViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class EnquiryCreateAPIView(APIView):
+    permission_classes = [AdminOnlyOr404]
     def post(self, request):
         serializer = EnquirySerializer(data=request.data)
         if serializer.is_valid():
