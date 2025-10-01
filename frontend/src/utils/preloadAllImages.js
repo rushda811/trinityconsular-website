@@ -14,6 +14,7 @@ export const preloadAllImages = () => {
     require("../assets/THAILANDp.webp"),
     require("../assets/UAEP.webp"),
     require("../assets/VIETNAMp.webp"),
+    require("../assets/MALASIYAp.webp"),
   ];
 
   criticalImages.forEach((src) => {

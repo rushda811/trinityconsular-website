@@ -1,5 +1,7 @@
 // src/components/shuttle.js
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+
 import shuttle from "../assets/shuttle.jpeg"
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -122,6 +124,10 @@ const ShuttleService = () => {
   const [showWizardModal, setShowWizardModal] = useState(false);
 
   return (
+      <>
+        <Helmet>
+          <title>Trinity Consular | Embassy Legalisation</title>
+        </Helmet>
     <div
       style={{
         backgroundColor: "#F0F6FA",
@@ -501,6 +507,7 @@ In addition to handling personal and business documents, we also act as trusted 
 />
 
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
 // src/components/About.js
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import logo from "../assets/logo.jpg";
@@ -26,7 +28,12 @@ const AnimatedUnderline = () => (
 );
 
 const About = () => {
+
   return (
+      <>
+    <Helmet>
+      <title>Trinity Consular | About Us</title>
+    </Helmet>
     <div
       style={{
         fontFamily: "'Open Sans', sans-serif",
@@ -396,6 +403,7 @@ lineHeight: "1.6", marginBottom: "1rem", textAlign: "left" }}>
         </Button>
       </div>
     </div>
+    </>
   );
 };
 

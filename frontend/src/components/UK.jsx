@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import cert1 from "../assets/cert1.jpg"
 import ukser from "../assets/UKSER.webp"
+import { Helmet } from "react-helmet";
 import cert2 from "../assets/cert2.jpg"
 import WizardEnquiryModal from "./WizardEnquiryModal";
 import cert3 from "../assets/cert3.png"
@@ -178,6 +179,10 @@ const UKApostilleFinal = () => {
 
   const navigate = useNavigate();
   return (
+      <>
+        <Helmet>
+          <title>Trinity Consular | Embassy Legalisation</title>
+        </Helmet>
     <div style={{ fontFamily: "Arial, sans-serif" }}>
 
       {/* HERO SECTION */}
@@ -892,6 +897,7 @@ const UKApostilleFinal = () => {
       </motion.div>
 
     </div>
+    </>
   );
 };
 

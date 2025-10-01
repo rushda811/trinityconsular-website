@@ -33,8 +33,8 @@ const countries = [
     bgImage: UAEP,
     details: {
       process: [
-        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are properly notarised and verified by local authorities, confirming authenticity." },
-        { step: 2, title: "UAE Embassy Authentication", description: "We handle submission to the UAE Embassy, where officials verify signatures, stamps, and seals for legal use in the UAE.." },
+        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
+        { step: 2, title: "UAE Embassy Authentication", description: "We handle submission to the UAE Embassy, where officials verify signatures, stamps, and seals for legal use in the UAE." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use, with no hassle for you." }
       ],
 documents: [
@@ -55,7 +55,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are notarised and verified by relevant authorities, confirming authenticity." },
+        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "China Embassy Authentication", description: "We handle the submission to the Chinese Embassy, where officials verify signatures, stamps, and seals for legal use in China." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in China—hassle-free." }
       ],
@@ -77,7 +77,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "Egypt Embassy Authentication", description: "We handle submission to the Egyptian Embassy, where officials verify signatures, stamps, and seals for legal use in Egypt." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Egypt—hassle-free." }
       ],
@@ -100,7 +100,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Notarisation & Verification", description:"We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "Jordan Embassy Authentication", description: "We handle submission to the Jordanian Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Jordan." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Jordan—without any hassle for you." }
       ],
@@ -122,7 +122,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: " kuwait Embassy Attestation", description: "We manage the submission to the Kuwaiti Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Kuwait." },
         { step: 3, title: "Completion & Safe Delivery", description: "official or business use in Kuwait—completely hassle-free." }
       ],
@@ -144,7 +144,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "Malaysia Embassy Authentication", description: "We handle submission to the Malaysian Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Malaysia." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Malaysia—without any hassle for you." }
       ],
@@ -166,7 +166,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "Pakistan Embassy Authentication", description: "We handle submission to the Pakistan Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Pakistan." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Pakistan—without any hassle for you." }
       ],
@@ -188,7 +188,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication."},
         { step: 2, title: "Qatar Embassy Authentication", description: "We handle submission to the Qatari Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Qatar." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Qatar—without any hassle for you." }
       ],
@@ -210,7 +210,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "MEA Apostille in India", description: "For OCI applications based on Indian parentage, we assist in verifying and preparing Apostille on your child’s birth certificate. This ensures smooth submission and acceptance by the authorities." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once apostilled, we ensure safe return of your documents—ready for official, educational, or business use abroad." }
       ],
@@ -231,7 +231,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication."},
         { step: 2, title: "Taiwan Embassy Authentication", description: "signatures, stamps, and seals for legal use in Taiwan." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Taiwan—without any hassle for you." }
       ],
@@ -253,7 +253,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
         { step: 2, title: "Thailand Embassy Authentication", description: "We handle submission to the Thai Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Thailand." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Thailand—without any hassle for you." }
       ],
@@ -275,7 +275,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication."},
         { step: 2, title: "Bahrain Embassy Authentication", description: "We handle submission to the Bahraini Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Bahrain." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Bahrain—without any hassle for you." }
       ],
@@ -297,7 +297,7 @@ documents: [
 
     details: {
       process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are correctly notarised and verified by the relevant local authorities to confirm authenticity." },
+        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication."},
         { step: 2, title: "Vietnam Embassy Authentication", description: "We handle submission to the Vietnamese Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Vietnam." },
         { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Vietnam—without any hassle for you." }
       ],

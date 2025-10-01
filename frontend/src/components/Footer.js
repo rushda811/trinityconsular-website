@@ -53,10 +53,11 @@ function Footer() {
             <h5 style={headingStyle}>Quick Links</h5>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               <motion.div whileHover={linkHover}><Link to="/" style={linkStyle}>Home</Link></motion.div>
+              <motion.div whileHover={linkHover}><Link to="/about" style={linkStyle}>About</Link></motion.div>
               <motion.div whileHover={linkHover}><Link to="/uk-apostille" style={linkStyle}>UK Apostille</Link></motion.div>
               <motion.div whileHover={linkHover}><Link to="/embassy-legalisation" style={linkStyle}>Embassy Legalisation</Link></motion.div>
               <motion.div whileHover={linkHover}><Link to="/shuttle-service" style={linkStyle}>Shuttle Services</Link></motion.div>
-              <motion.div whileHover={linkHover}><Link to="/contact" style={linkStyle}>Contact</Link></motion.div>
+              <motion.div whileHover={linkHover}><Link to="/contact" style={linkStyle}>Contact Us</Link></motion.div>
             </div>
           </Col>
 
@@ -65,8 +66,6 @@ function Footer() {
             >Contact Us</h5>
             <p style={{ color: "#1A3C8A",fontFamily: "'Open Sans', sans-serif" , lineHeight: 1.6 }}>
               📧 <motion.a whileHover={{ scale: 1.1, color: "#FF8C5A" }} href="mailto:akbar@trinityconsular.com" style={linkStyle}>akbar@trinityconsular.com</motion.a><br /><br />
-              📧 <motion.a whileHover={{ scale: 1.1, color: "#FF8C5A" }} href="mailto:accounts@trinityconsular.com" style={linkStyle}>accounts@trinityconsular.com</motion.a><br /><br />
-              📞 0044&nbsp;7440076614
             </p>
           </Col>
         </Row>

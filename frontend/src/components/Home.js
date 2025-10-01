@@ -234,6 +234,7 @@ wrapper.style.transformOrigin = "top center";
   }, []);
 
   return (
+    
     <div
   id="scale-wrapper"
   style={{
@@ -926,7 +927,7 @@ wrapper.style.transformOrigin = "top center";
   .learn-more-link {
     position: relative;
     display: inline-block;
-    color: #051b44ff;
+    color: #FF5F1F;
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;

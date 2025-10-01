@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 
 function Contact() {
   const [buttonHover, setButtonHover] = useState(false);
@@ -56,6 +57,10 @@ const res = await fetch("https://trinityconsular-website.onrender.com/api/contac
   };
 
   return (
+      <>
+        <Helmet>
+          <title>Trinity Consular | Contact Us</title>
+        </Helmet>
     <div style={{ fontFamily: "Arial, sans-serif", backgroundColor: "#F7FAFC", position: "relative" }}>
       {/* Toast */}
       {toast.show && (
@@ -232,7 +237,6 @@ const res = await fetch("https://trinityconsular-website.onrender.com/api/contac
             <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "0.95rem", fontStyle: "italic", opacity: 0.9 }}>(Closed on weekends and public holidays)</p>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "5px" }}>
-            <span>📧 <a href="mailto:akbar@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>akbar@trinityconsular.com</a></span>
             <span>📧 <a href="mailto:accounts@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>info@trinityconsular.com</a></span>
             <span>📞 Phone: 0044 7440076614</span>
           </div>
@@ -240,6 +244,7 @@ const res = await fetch("https://trinityconsular-website.onrender.com/api/contac
         </div>
       </section>
     </div>
+    </>
   );
 }
 
@@ -251,6 +256,7 @@ function FormField({ label, name, type = "text", value, onChange, required = fal
       <label style={labelStyle}>{label}</label>
       {type === "textarea" ? <textarea {...common} style={{ ...inputStyle, height: "150px" }} /> : <input type={type} {...common} />}
     </div>
+  
   );
 }
 

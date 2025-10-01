@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Row, Col, Container,Button } from "react-bootstrap";
 import { motion} from "framer-motion";
+import { Helmet } from "react-helmet";
+
 import embassy from "../assets/embassy.webp";
 import CountryModal from "./CountryModal";
 import WizardEnquiryModal from "./WizardEnquiryModal";
@@ -18,6 +20,7 @@ const FAQAccordion = ({ items }) => {
   const toggleItem = (index) => setOpenIndex(openIndex === index ? null : index);
 
   return (
+    
     <Row>
       {items.map((item, index) => (
         <Col md={6} key={index} className="mb-3">
@@ -222,6 +225,10 @@ const [selectedCountry, setSelectedCountry] = useState(null);
   }, []);
 
   return (
+    <>
+    <Helmet>
+        <title>Trinity Consular | Embassy Legalisation</title>
+      </Helmet>
     <div style={{ fontFamily: "Arial, sans-serif", background: "#f9f9f9" }}>
     {/* HERO SECTION */}
     <motion.div
@@ -1092,5 +1099,6 @@ onClick={() => openCountryModal(c)}
 />
 
     </div>
+    </>
   );
 }
