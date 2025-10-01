@@ -26,5 +26,7 @@ urlpatterns = [
 
 # ✅ Catch-all for React routes, EXCLUDING /static/
 urlpatterns += [
-     re_path(r'^.*$', index),
+     # Only match routes that don't start with static or media or known files
+    re_path(r'^(?!static|favicon\.ico|manifest\.json|logo192\.png).*$', index),
+
 ]
