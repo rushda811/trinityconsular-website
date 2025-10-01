@@ -35,8 +35,10 @@ class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
     permission_classes = [AdminOnlyOr404]
+
     def get_permissions(self):
-        if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
+        # Only allow public GET from the website frontend
+        if self.request.META.get('HTTP_ORIGIN') == 'https://trinityconsular-website.onrender.com':
             return [AllowAny()]
         return [IsAdminUser()]
     
