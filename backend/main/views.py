@@ -37,10 +37,12 @@ class ServiceViewSet(viewsets.ModelViewSet):
     permission_classes = [AdminOnlyOr404]
 
     def get_permissions(self):
-        # Only allow public GET from the website frontend
-        if self.request.META.get('HTTP_ORIGIN') == 'https://trinityconsular-website.onrender.com':
+        origin = self.request.META.get('HTTP_ORIGIN', '')
+        if self.request.method == 'GET' and origin == 'https://trinityconsular-website.onrender.com':
             return [AllowAny()]
         return [IsAdminUser()]
+
+
     
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
