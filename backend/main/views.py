@@ -34,16 +34,11 @@ def index(request):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
-
+    permission_classes = [AdminOnlyOr404]
     def get_permissions(self):
-        # Always allow GET requests from your website frontend
-        if self.request.method == 'GET':
-            origin = self.request.META.get('HTTP_ORIGIN', '')
-            if origin == 'https://trinityconsular-website.onrender.com':
-                return [AllowAny()]
-        # All other requests require admin
+        if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
+            return [AllowAny()]
         return [IsAdminUser()]
-
     
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
