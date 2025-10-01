@@ -22,6 +22,7 @@ urlpatterns = [
     path('favicon.ico', lambda request: serve(request, 'favicon.ico', document_root=settings.FRONTEND_BUILD_DIR)),
     path('logo192.png', lambda request: serve(request, 'logo192.png', document_root=settings.FRONTEND_BUILD_DIR)),
      path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path('sitemap.xml', lambda request: serve(request, 'sitemap.xml', document_root=settings.FRONTEND_BUILD_DIR)),
 
 ]
 
