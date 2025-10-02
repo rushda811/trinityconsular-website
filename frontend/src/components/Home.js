@@ -927,7 +927,7 @@ wrapper.style.transformOrigin = "top center";
   .learn-more-link {
     position: relative;
     display: inline-block;
-    color: #FF5F1F;
+    color: #e67129ff;
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;
