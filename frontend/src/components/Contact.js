@@ -237,7 +237,7 @@ const res = await fetch("https://trinityconsular-website.onrender.com/api/contac
             <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "0.95rem", fontStyle: "italic", opacity: 0.9 }}>(Closed on weekends and public holidays)</p>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "5px" }}>
-            <span>📧 <a href="mailto:accounts@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>info@trinityconsular.com</a></span>
+            <span>📧 <a href="mailto:info@trinityconsular.com" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }} onMouseEnter={(e) => (e.target.style.color = "#FF8C5A")} onMouseLeave={(e) => (e.target.style.color = "#fff")}>info@trinityconsular.com</a></span>
             <span>📞 Phone: 0044 7440076614</span>
           </div>
           <iframe title="office-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9998520375707!2d-0.15716702369773822!3d51.51321871027866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605ca560b4db7%3A0x499d055460782789!2sRegus%20-%20London%2C%20Oxford%20Street%20(Marble%20Arch)!5e0!3m2!1sen!2sin!4v1757307617215!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0, borderRadius: "8px", marginBottom: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />

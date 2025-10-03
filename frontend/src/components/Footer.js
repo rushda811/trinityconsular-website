@@ -65,7 +65,7 @@ function Footer() {
             <h5 style={headingStyle}
             >Contact Us</h5>
             <p style={{ color: "#1A3C8A",fontFamily: "'Open Sans', sans-serif" , lineHeight: 1.6 }}>
-              📧 <motion.a whileHover={{ scale: 1.1, color: "#FF8C5A" }} href="mailto:akbar@trinityconsular.com" style={linkStyle}>akbar@trinityconsular.com</motion.a><br /><br />
+              📧 <motion.a whileHover={{ scale: 1.1, color: "#FF8C5A" }} href="mailto:info@trinityconsular.com" style={linkStyle}>info@trinityconsular.com</motion.a><br /><br />
               📞 0044&nbsp;7440076614
             </p>
           </Col>
