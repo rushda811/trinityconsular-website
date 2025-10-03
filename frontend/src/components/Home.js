@@ -4,6 +4,7 @@ import dhl from "../assets/dhl.webp";
 import degree from "../assets/degree.png";
 import birth from "../assets/birth.jpg";
 import london from "../assets/london.webp";
+import { Helmet } from "react-helmet";
 import pg from "../assets/pg.jpg";
 import poa from "../assets/poa.jpg";
 import { motion } from "framer-motion";
@@ -234,6 +235,10 @@ wrapper.style.transformOrigin = "top center";
   }, []);
 
   return (
+     <>
+        <Helmet>
+          <title>Trinity Consular | Apostille,Legalisation Experts</title>
+        </Helmet>
     
     <div
   id="scale-wrapper"
@@ -974,6 +979,7 @@ wrapper.style.transformOrigin = "top center";
 `}</style>
 
     </div>
+    </>
   );
 }
 

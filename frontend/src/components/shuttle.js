@@ -126,7 +126,7 @@ const ShuttleService = () => {
   return (
       <>
         <Helmet>
-          <title>Trinity Consular | Embassy Legalisation</title>
+          <title>Trinity Consular | Shuttle Services</title>
         </Helmet>
     <div
       style={{
