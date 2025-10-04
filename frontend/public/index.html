@@ -9,8 +9,10 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="We specialise in authenticating personal, corporate, and legal documents with speed, accuracy, and compliance."
     />
+    <link rel="canonical" href="https://www.trinityconsular.com" />
+
     <!-- Preload hero and home background images -->
 <link rel="preload" as="image" href="/static/media/london.e4a3e2f56d5d291ff91f.webp">
 <link rel="preload" as="image" href="/static/media/bgappostile.78601c4633e4f55105d4.webp">
@@ -36,6 +38,11 @@
 <!-- Windows tiles (optional) -->
 <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon-192x192.png" />
 <meta name="msapplication-TileColor" content="#ffffff" />
+<meta property="og:title" content="Trinity Consular | Apostille & Legalisation Experts" />
+<meta property="og:description" content="Fast, accurate, and reliable document legalisation and attestation services for the UAE and beyond." />
+<meta property="og:url" content="https://www.trinityconsular.com" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.trinityconsular.com/static/logo.png" />
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -60,7 +67,87 @@
     width: 100%;
   }
 </style>
-    <title>Trinity Consular</title>
+<!-- Business / Office Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Trinity Consular",
+  "url": "https://www.trinityconsular.com",
+  "logo": "https://www.trinityconsular.com/static/logo.png",
+  "image": "https://www.trinityconsular.com/static/logo.png",
+  "description": "We specialise in authenticating personal, corporate, and legal documents with speed, accuracy, and compliance.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "25 North Row, Marble Arch",
+    "addressLocality": "London",
+    "postalCode": "W1K 6DJ",
+    "addressCountry": "England"
+  },
+  "telephone": "+44 7440 076614",
+  "email": "info@trinityconsular.com",
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "priceRange": "$$"
+}
+</script>
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Document Legalisation, Apostille & Shuttle Services",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Trinity Consular",
+    "url": "https://www.trinityconsular.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "United Kingdom, UAE, Middle East, and Worldwide"
+  },
+  "description": "Trinity Consular provides reliable Apostille, Embassy Legalisation, and Shuttle Services with accuracy and compliance.",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.trinityconsular.com/services",
+    "priceCurrency": "GBP",
+    "price": "Contact for quote",
+    "availability": "https://schema.org/InStock"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Our Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Apostille Services",
+          "description": "Fast and reliable Apostille services for personal and corporate documents."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Embassy Legalisation",
+          "description": "Consular legalisation of documents for use in the UAE, Qatar, Kuwait, and other countries."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Shuttle Services",
+          "description": "Convenient shuttle and document collection services to make the legalisation process stress-free."
+        }
+      }
+    ]
+  }
+}
+</script>
+
+    <title>Trinity Consular | Apostille & Legalisation Experts</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
