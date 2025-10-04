@@ -1,166 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="We specialise in authenticating personal, corporate, and legal documents with speed, accuracy, and compliance."
-    />
-    <link rel="canonical" href="https://www.trinityconsular.com" />
+  <!-- Site Title & Description -->
+  <title>Trinity Consular | Apostille, Embassy Legalisation & Shuttle Services UK & UAE</title>
+  <meta name="description" content="Trinity Consular provides fast and reliable Apostille, Embassy Legalisation, and Document Shuttle Services in the UK, UAE, and worldwide. Contact us for accurate and compliant document attestation.">
+  <meta name="keywords" content="Apostille, Legalisation, Embassy, UK, UAE, Document Services">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.trinityconsular.com" />
 
-    <!-- Preload hero and home background images -->
-<link rel="preload" as="image" href="/static/media/london.e4a3e2f56d5d291ff91f.webp">
-<link rel="preload" as="image" href="/static/media/bgappostile.78601c4633e4f55105d4.webp">
-<link rel="preload" as="image" href="/static/media/embassy.2a1e2261449cead371a0.webp"> 
-<link rel="preload" as="image" href="/static/media/shuttle.645f55bcb7b66bd60c59.jpeg"> 
-<link rel="preload" as="image" href="/static/media/UKSER.266101d0f06d58edcaec.webp"> 
-<link rel="preload" as="image" href="/static/media/worldmap.be4eab597c008474a9fc.jpg">
-<link rel="preload" as="image" href="/static/media/homeimage.cd322bd97531d754da75.jpeg">
-<link rel="preload" as="image" href="/static/media/cert1.3228cdd56443a1f54a92.jpg">
-<link rel="preload" as="image" href="/static/media/cert2.72cc74ca9d824b6a549a.jpg">
-<link rel="preload" as="image" href="/static/media/cert3.d9100c55f475eee684ae.png">
-<link rel="preload" as="image" href="/static/media/cert4.65a57ce3f9bc2ee7f8c4.jpg">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#000000" />
 
- <!-- Favicon for all browsers -->
-<link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicon-192x192.png">
-<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicon-192x192.png">
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" sizes="180x180" />
+  <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon-192x192.png" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
 
-<!-- iOS/Android home screen icon -->
-<link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" sizes="180x180" />
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="Trinity Consular | Apostille, Embassy Legalisation & Shuttle Services">
+  <meta property="og:description" content="Trinity Consular provides fast and reliable Apostille, Embassy Legalisation, and Document Shuttle Services in the UK, UAE, and worldwide.">
+  <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg">
+  <meta property="og:url" content="https://www.trinityconsular.com">
+  <meta property="og:type" content="website">
 
-<!-- Windows tiles (optional) -->
-<meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon-192x192.png" />
-<meta name="msapplication-TileColor" content="#ffffff" />
-<meta property="og:title" content="Trinity Consular | Apostille & Legalisation Experts" />
-<meta property="og:description" content="Fast, accurate, and reliable document legalisation and attestation services for the UAE and beyond." />
-<meta property="og:url" content="https://www.trinityconsular.com" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.trinityconsular.com/static/logo.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trinity Consular | Apostille, Embassy Legalisation & Shuttle Services">
+  <meta name="twitter:description" content="Trinity Consular provides fast and reliable Apostille, Embassy Legalisation, and Document Shuttle Services in the UK, UAE, and worldwide.">
+  <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg">
 
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <!-- Global CSS Reset -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; }
+  </style>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-      <style>
-
-  /* Global CSS reset to remove default spacing */
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
-</style>
-<!-- Business / Office Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Trinity Consular",
-  "url": "https://www.trinityconsular.com",
-  "logo": "https://www.trinityconsular.com/static/logo.png",
-  "image": "https://www.trinityconsular.com/static/logo.png",
-  "description": "We specialise in authenticating personal, corporate, and legal documents with speed, accuracy, and compliance.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "25 North Row, Marble Arch",
-    "addressLocality": "London",
-    "postalCode": "W1K 6DJ",
-    "addressCountry": "England"
-  },
-  "telephone": "+44 7440 076614",
-  "email": "info@trinityconsular.com",
-  "openingHours": "Mo-Fr 09:00-17:00",
-  "priceRange": "$$"
-}
-</script>
-
-<!-- Service Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Document Legalisation, Apostille & Shuttle Services",
-  "provider": {
-    "@type": "ProfessionalService",
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
     "name": "Trinity Consular",
-    "url": "https://www.trinityconsular.com"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "United Kingdom, UAE, Middle East, and Worldwide"
-  },
-  "description": "Trinity Consular provides reliable Apostille, Embassy Legalisation, and Shuttle Services with accuracy and compliance.",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.trinityconsular.com/services",
-    "priceCurrency": "GBP",
-    "price": "Contact for quote",
-    "availability": "https://schema.org/InStock"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Our Services",
+    "image": "%PUBLIC_URL%/logo.png",
+    "url": "https://www.trinityconsular.com",
+    "logo": "%PUBLIC_URL%/logo.png",
+    "description": "Trinity Consular provides fast and reliable Apostille, Embassy Legalisation, and Document Shuttle Services in the UK, UAE, and worldwide.",
+    "telephone": "+44 7440 076614",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "25 North Row, Marble Arch",
+      "addressLocality": "London",
+      "postalCode": "W1K 6DJ",
+      "addressCountry": "UK"
+    },
+    "openingHours": "Mo-Fr 09:00-17:00"
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Apostille Services",
-          "description": "Fast and reliable Apostille services for personal and corporate documents."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Embassy Legalisation",
-          "description": "Consular legalisation of documents for use in the UAE, Qatar, Kuwait, and other countries."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Shuttle Services",
-          "description": "Convenient shuttle and document collection services to make the legalisation process stress-free."
-        }
-      }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.trinityconsular.com" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.trinityconsular.com/about" },
+      { "@type": "ListItem", "position": 3, "name": "Contact", "item": "https://www.trinityconsular.com/contact" },
+      { "@type": "ListItem", "position": 4, "name": "Embassy Legalisation", "item": "https://www.trinityconsular.com/embassy-legalisation" },
+      { "@type": "ListItem", "position": 5, "name": "UK Apostille", "item": "https://www.trinityconsular.com/uk-apostille" },
+      { "@type": "ListItem", "position": 6, "name": "Shuttle Services", "item": "https://www.trinityconsular.com/shuttle-service" }
     ]
   }
-}
-</script>
+  </script>
 
-    <title>Trinity Consular | Apostille & Legalisation Experts</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
 </html>
