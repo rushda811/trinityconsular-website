@@ -233,11 +233,6 @@ wrapper.style.transformOrigin = "top center";
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-useEffect(() => {
-  const img = new Image();
-  img.src = "/images/bgApostile.jpg";
-}, []);
-
   return (
      <>
         <Helmet>
@@ -261,7 +256,7 @@ useEffect(() => {
       <section
         style={{
           backgroundColor: "#E0EDF9",
-          backgroundImage: `url("/images/bgappostile.webp")`,
+backgroundImage: "url('/static/images/bgappostile.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
