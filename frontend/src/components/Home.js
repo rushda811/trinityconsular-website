@@ -25,7 +25,6 @@ import {
   FaBus,
 } from "react-icons/fa";
 
-import bgApostile from "../assets/bgappostile.webp";
 
 const iconMap = {
   FaCertificate: FaCertificate,
@@ -233,6 +232,11 @@ wrapper.style.transformOrigin = "top center";
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
+useEffect(() => {
+  const img = new Image();
+  img.src = "/images/bgApostile.jpg";
+}, []);
 
   return (
      <>
@@ -257,7 +261,7 @@ wrapper.style.transformOrigin = "top center";
       <section
         style={{
           backgroundColor: "#E0EDF9",
-          backgroundImage: `url(${bgApostile})`,
+          backgroundImage: `url("/images/bgApostile.jpg")`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
