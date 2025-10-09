@@ -1,3 +1,21 @@
-# https://www.robotstxt.org/robotstxt.html
+# ==========================================
+# Trinity Consular Robots.txt
+# Allows search engines to crawl all pages
+# ==========================================
+
+# Apply to all search engines
 User-agent: *
+
+# Allow everything
 Disallow:
+
+# Sitemap location for faster indexing
+Sitemap: https://www.trinityconsular.com/sitemap.xml
+
+# ==========================================
+# Optional: block internal folders not meant for indexing
+# Uncomment if needed
+# Disallow: /node_modules/
+# Disallow: /build/
+# Disallow: /private/
+# ==========================================
