@@ -49,27 +49,35 @@ documents: [
     }
   },
   {
-    name: "China",
-    flag: china,
-    bgImage: chinap,
+  name: "China",
+  flag: china,
+  bgImage: chinap,
 
-    details: {
-      process: [
-        { step: 1, title: "Document Notarisation & Verification", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." },
-        { step: 2, title: "China Embassy Authentication", description: "We handle the submission to the Chinese Embassy, where officials verify signatures, stamps, and seals for legal use in China." },
-        { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in China—hassle-free." }
-      ],
-documents: [
-  "Original documents/Scanned Copies (scanned copies or of Birth, Marriage, Death certificates, and Police Clearance will not be accepted)",
-  "Passport copy of the applicant or authorized signatory",
-  "Notarization or attestation from the Ministry of Foreign Affairs (home country)",
-  "Chinese translation by certified translator (if applicable)",
-  "Applicable Chinese embassy fees and processing time"
-],
-      pricing: ["Personal Documents: £750", "Educational documents: £190", "Commercial Documents: £300"],
-      EstimatedProcessing: "Processing takes about 9 business days."
-    }
-  },
+  details: {
+    process: [
+      { 
+        step: 1, 
+        title: "Document Notarisation & Apostille", 
+        description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." 
+      },
+      { 
+        step: 2, 
+        title: "Completion & Safe Delivery", 
+        description: "Once apostilled, we return your documents securely, fully authenticated and ready for official or business use in China—hassle-free." 
+      }
+    ],
+    documents: [
+      "Original documents/Scanned Copies (scanned copies of Birth, Marriage, Death certificates, and Police Clearance will not be accepted)",
+      "Passport copy of the applicant or authorized signatory",
+      "Notarization or attestation from the Ministry of Foreign Affairs (home country)",
+      "Chinese translation by certified translator (if applicable)",
+      "Applicable apostille fees and processing time"
+    ],
+    pricing: ["Personal Documents: £750", "Educational Documents: £190", "Commercial Documents: £300"],
+    EstimatedProcessing: "Processing takes about 9 business days."
+  }
+},
+
   {
     name: "Egypt",
     flag: egypt,
@@ -88,7 +96,7 @@ documents: [
   "Certified Arabic translation for certain documents",
   "Applicable Egyptian embassy fees and processing time"
 ],
-      pricing: ["Employment/Experience Letters: £220", "Educational Documents: £180","Commercial Document depends on the of the type of document"],
+      pricing: ["Employment/Experience Letters: £220", "Educational Documents: £180","Commercial Document depends on the type of document"],
       EstimatedProcessing: "Processing may take 5-7 business days."
     }
   },
@@ -133,7 +141,7 @@ documents: [
   "Certified Arabic translation for selected documents",
   "Applicable Kuwaiti embassy fees and processing time"
 ],
-      pricing: ["Personal Documents: £160","Educational Documents: £160","Commercial Documents: 320"],
+      pricing: ["Personal Documents: £160","Educational Documents: £160","Commercial Documents: £320"],
       EstimatedProcessing: "Processing takes about 5-7 business days."
     }
   },
@@ -269,27 +277,34 @@ documents: [
     }
   },
   {
-    name: "Bahrain",
-    flag: bahrain,
-        bgImage: bahrainp,
+  name: "Bahrain",
+  flag: bahrain,
+  bgImage: bahrainp,
 
-    details: {
-      process: [
-        { step: 1, title: "Document Verification & Notarization", description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication."},
-        { step: 2, title: "Bahrain Embassy Authentication", description: "We handle submission to the Bahraini Embassy, where officials authenticate the signatures, stamps, and seals for legal use in Bahrain." },
-        { step: 3, title: "Completion & Safe Delivery", description: "Once legalised, we return your documents securely, fully authenticated and ready for official or business use in Bahrain—without any hassle for you." }
-      ],
-documents: [
-  "Original documents/Scanned Copies (scanned copies or of Birth, Marriage, Death certificates, and Police Clearance will not be accepted)",
-  "Passport copy of the applicant or authorized signatory",
-  "Notarization or home country attestation (if required)",
-  "Certified Arabic translation for some documents",
-  "Applicable Bahrain embassy fees and processing time"
-],
-      pricing: ["Personal Documents: £160", "Educational Dcomuents: £170","Commercial Documents:depends.."],
-      EstimatedProcessing: "Processing takes about 5-7 business days."
-    }
-  },
+  details: {
+    process: [
+      { 
+        step: 1, 
+        title: "Document Verification & Apostille", 
+        description: "We ensure your documents are properly notarised and verified by local authorities, and then we handle the apostille process by submitting them to the FCDO for authentication." 
+      },
+      { 
+        step: 2, 
+        title: "Completion & Safe Delivery", 
+        description: "Once apostilled, we return your documents securely, fully authenticated and ready for official or business use in Bahrain—without any hassle for you." 
+      }
+    ],
+    documents: [
+      "Original documents/Scanned Copies (scanned copies of Birth, Marriage, Death certificates, and Police Clearance will not be accepted)",
+      "Passport copy of the applicant or authorized signatory",
+      "Notarization or home country attestation (if required)",
+      "Certified Arabic translation for some documents",
+      "Applicable Bahrain apostille fees and processing time"
+    ],
+    pricing: ["Personal Documents: £160", "Educational Documents: £170", "Commercial Documents: depends.."],
+    EstimatedProcessing: "Processing takes about 5-7 business days."
+  }
+},
   {
     name: "Vietnam",
     flag: vietnam,

@@ -175,7 +175,7 @@ const cardData = [
 "PGCE & Teaching certificates"],
   },
   {
-    title: "Cooperate",
+    title: "CORPORATE",
     days: "5-7 Working Days",
     points: [
 "Articles of Association",
